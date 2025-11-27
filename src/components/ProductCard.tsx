@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +17,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({
+  id,
   title,
   description,
   price,
@@ -25,6 +27,15 @@ const ProductCard = ({
   isBestseller,
 }: ProductCardProps) => {
   const [isLiked, setIsLiked] = useState(false);
+  const navigate = useNavigate();
+
+  const handleOrderClick = () => {
+    navigate("/product-inquiry", {
+      state: {
+        product: { id, title, description, price, image, category, isBestseller, isNew }
+      }
+    });
+  };
 
   return (
     <Card className="group overflow-hidden hover:shadow-elegant transition-smooth border-border">
@@ -73,7 +84,7 @@ const ProductCard = ({
       <CardFooter className="p-5 pt-0 flex gap-2">
         <Button
           className="flex-1 bg-primary hover:bg-primary-glow"
-          onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+          onClick={handleOrderClick}
         >
           <ShoppingCart className="mr-2 h-4 w-4" />
           Order Now

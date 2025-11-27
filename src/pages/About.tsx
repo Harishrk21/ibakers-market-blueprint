@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Heart, Award, Users, MapPin } from "lucide-react";
@@ -5,7 +6,31 @@ import heroImage from "@/assets/hero-cake.jpg";
 import masterclassImage from "@/assets/masterclass.jpg";
 
 const About = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About IBakers Chennai",
+    "description": "Learn about IBakers, Chennai's trusted home baker since 2018. Premium custom cakes with fresh ingredients and no preservatives.",
+    "url": "https://www.ibakers.com/about"
+  };
+
   return (
+    <>
+      <Helmet>
+        <title>About IBakers | Chennai's Trusted Home Baker Since 2018</title>
+        <meta name="description" content="Learn about IBakers, Chennai's premium home-based bakery. Crafting custom cakes with fresh ingredients, no preservatives. Serving Chennai since 2018 with 500+ happy customers." />
+        <meta name="keywords" content="about IBakers, Chennai home baker, custom cake maker Chennai, bakery story Chennai, home-made cakes Chennai" />
+        <link rel="canonical" href="https://www.ibakers.com/about" />
+        
+        <meta property="og:title" content="About IBakers | Chennai's Trusted Home Baker" />
+        <meta property="og:description" content="Chennai's premium home baker since 2018, crafting custom cakes with love" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={heroImage} />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -191,6 +216,7 @@ const About = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

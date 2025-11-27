@@ -10,6 +10,15 @@ import Masterclasses from "./pages/Masterclasses";
 import CustomOrders from "./pages/CustomOrders";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import ProductInquiry from "./pages/ProductInquiry";
+import BirthdayCakes from "./pages/categories/BirthdayCakes";
+import WeddingCakes from "./pages/categories/WeddingCakes";
+import TrendingCakes from "./pages/categories/TrendingCakes";
+import ThemeCakes from "./pages/categories/ThemeCakes";
+import FlavourCakes from "./pages/categories/FlavourCakes";
+import ChristmasSpecials from "./pages/categories/ChristmasSpecials";
+import BrowniesDesserts from "./pages/categories/BrowniesDesserts";
+import SpecialtyCakes from "./pages/categories/SpecialtyCakes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +33,15 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/product-inquiry" element={<ProductInquiry />} />
+          <Route path="/categories/birthday-cakes" element={<BirthdayCakes />} />
+          <Route path="/categories/wedding-cakes" element={<WeddingCakes />} />
+          <Route path="/categories/trending-cakes" element={<TrendingCakes />} />
+          <Route path="/categories/theme-cakes" element={<ThemeCakes />} />
+          <Route path="/categories/flavour-cakes" element={<FlavourCakes />} />
+          <Route path="/categories/christmas-specials" element={<ChristmasSpecials />} />
+          <Route path="/categories/brownies-desserts" element={<BrowniesDesserts />} />
+          <Route path="/categories/specialty-cakes" element={<SpecialtyCakes />} />
           <Route path="/masterclasses" element={<Masterclasses />} />
           <Route path="/custom-orders" element={<CustomOrders />} />
           <Route path="/gallery" element={<Gallery />} />
