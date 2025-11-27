@@ -15,10 +15,10 @@ const Footer = () => {
               Chennai's trusted home baker for custom cakes, brownies, and baking masterclasses. Made with love, delivered with care.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+              <a href="https://www.facebook.com/share/1DWxRT89kV/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+              <a href="https://www.instagram.com/i._.bakers_?igsh=ejM4bjh1ZGpmd285" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -72,8 +72,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
-                <a href="tel:+919876543210" className="hover:text-primary transition-smooth">
-                  +91 98765 43210
+                <a href="tel:+918825471551" className="hover:text-primary transition-smooth">
+                  +91 88254 71551
                 </a>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
