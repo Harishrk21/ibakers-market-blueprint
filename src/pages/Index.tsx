@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
@@ -14,7 +15,64 @@ import christmasCakeImage from "@/assets/christmas-cake.jpg";
 import masterclassImage from "@/assets/masterclass.jpg";
 
 const Index = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "IBakers",
+    "description": "Premium home-based bakery in Chennai specializing in custom cakes, brownies, desserts and baking masterclasses",
+    "url": "https://www.ibakers.com",
+    "logo": "https://www.ibakers.com/logo.png",
+    "image": heroImage,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919876543210",
+    "priceRange": "₹₹",
+    "servesCuisine": "Bakery & Desserts",
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-20:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "500"
+    }
+  };
+
   return (
+    <>
+      <Helmet>
+        <title>IBakers Chennai | Custom Home-Made Cakes, Birthday Cakes & Desserts</title>
+        <meta name="description" content="Order fresh, home-made custom cakes in Chennai. Specializing in birthday cakes, wedding cakes, Christmas cakes, brownies & baking masterclasses. Same-day delivery across Chennai - Adyar, T Nagar, Velachery, Anna Nagar." />
+        <meta name="keywords" content="cakes Chennai, home-made cakes, custom cakes Chennai, birthday cakes Chennai, wedding cakes Chennai, baking classes Chennai, brownies Chennai, IBakers" />
+        <link rel="canonical" href="https://www.ibakers.com/" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="IBakers Chennai | Custom Home-Made Cakes & Desserts" />
+        <meta property="og:description" content="Order fresh, home-made custom cakes in Chennai. Birthday cakes, wedding cakes & more. Same-day delivery available." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ibakers.com/" />
+        <meta property="og:image" content={heroImage} />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content="IBakers Chennai" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="IBakers Chennai | Custom Home-Made Cakes" />
+        <meta name="twitter:description" content="Fresh home-made cakes delivered across Chennai" />
+        <meta name="twitter:image" content={heroImage} />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="geo.region" content="IN-TN" />
+        <meta name="geo.placename" content="Chennai" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -316,6 +374,7 @@ const Index = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

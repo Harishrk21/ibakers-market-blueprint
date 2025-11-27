@@ -1,0 +1,249 @@
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Phone, MessageCircle } from "lucide-react";
+
+const ProductInquiry = () => {
+  const location = useLocation();
+  const product = location.state?.product;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  if (!product) {
+    window.location.href = "/products";
+    return null;
+  }
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.title,
+    "description": product.description,
+    "image": product.image,
+    "offers": {
+      "@type": "Offer",
+      "price": product.price.replace('₹', '').replace(',', ''),
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "LocalBusiness",
+        "name": "IBakers",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        }
+      }
+    }
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{product.title} - Order Now | IBakers Chennai</title>
+        <meta name="description" content={`Order ${product.title} in Chennai. ${product.description}. Fresh home-made cakes delivered across Chennai.`} />
+        <meta name="keywords" content={`${product.title}, ${product.category}, order cakes Chennai, IBakers`} />
+        <link rel="canonical" href={`https://www.ibakers.com/product/${product.id}`} />
+        
+        <meta property="og:title" content={`${product.title} | IBakers Chennai`} />
+        <meta property="og:description" content={product.description} />
+        <meta property="og:image" content={product.image} />
+        <meta property="og:type" content="product" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* Product Image */}
+                <div className="space-y-6">
+                  <div className="relative overflow-hidden rounded-2xl shadow-elegant aspect-square">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-full object-cover"
+                    />
+                    {product.isBestseller && (
+                      <span className="absolute top-4 left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                        Bestseller
+                      </span>
+                    )}
+                    {product.isNew && (
+                      <span className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                        New
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Product Details & Form */}
+                <div className="space-y-8">
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2">{product.category}</p>
+                    <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
+                    <p className="text-xl text-muted-foreground mb-6">{product.description}</p>
+                    <p className="text-3xl font-bold text-primary">{product.price}</p>
+                  </div>
+
+                  {/* Order Form */}
+                  <form
+                    action="https://formsubmit.co/harishradhakrishnan2001@gmail.com"
+                    method="POST"
+                    className="space-y-6 bg-card p-8 rounded-2xl border border-border"
+                  >
+                    <input type="hidden" name="_subject" value={`New Order Inquiry: ${product.title}`} />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="Product Name" value={product.title} />
+                    <input type="hidden" name="Product Price" value={product.price} />
+                    <input type="hidden" name="Category" value={product.category} />
+
+                    <h2 className="text-2xl font-bold">Order This Cake</h2>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Your Name *</Label>
+                      <Input
+                        id="name"
+                        name="Customer Name"
+                        placeholder="Enter your full name"
+                        required
+                        className="w-full"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input
+                        id="phone"
+                        name="Phone Number"
+                        type="tel"
+                        placeholder="Enter your 10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        required
+                        className="w-full"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input
+                        id="email"
+                        name="Email"
+                        type="email"
+                        placeholder="your.email@example.com"
+                        required
+                        className="w-full"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="weight">Cake Weight *</Label>
+                      <Select name="Cake Weight" required>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="Select weight" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="0.5kg">0.5 kg (4-6 people)</SelectItem>
+                          <SelectItem value="1kg">1 kg (8-10 people)</SelectItem>
+                          <SelectItem value="1.5kg">1.5 kg (12-15 people)</SelectItem>
+                          <SelectItem value="2kg">2 kg (16-20 people)</SelectItem>
+                          <SelectItem value="3kg">3 kg (24-30 people)</SelectItem>
+                          <SelectItem value="custom">Custom (specify in message)</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="delivery-date">Delivery Date *</Label>
+                      <Input
+                        id="delivery-date"
+                        name="Delivery Date"
+                        type="date"
+                        required
+                        min={new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+                        className="w-full"
+                      />
+                      <p className="text-xs text-muted-foreground">Minimum 3 days advance notice required</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="delivery-location">Delivery Location in Chennai *</Label>
+                      <Input
+                        id="delivery-location"
+                        name="Delivery Location"
+                        placeholder="e.g., Adyar, T Nagar, Velachery"
+                        required
+                        className="w-full"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Special Instructions</Label>
+                      <Textarea
+                        id="message"
+                        name="Special Instructions"
+                        placeholder="Any customization requests, flavor preferences, or special messages on cake"
+                        rows={4}
+                        className="w-full"
+                      />
+                    </div>
+
+                    <Button type="submit" size="lg" className="w-full">
+                      Send Order Inquiry
+                    </Button>
+
+                    <div className="flex gap-3">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="lg"
+                        onClick={() => window.open("tel:+919876543210")}
+                        className="flex-1 flex items-center justify-center gap-2"
+                      >
+                        <Phone className="h-5 w-5" />
+                        Call to Order
+                      </Button>
+                      <Button
+                        type="button"
+                        size="lg"
+                        onClick={() => {
+                          const msg = `Hi! I'm interested in ordering *${product.title}* (${product.price}) from your ${product.category} collection. Please share more details.`;
+                          window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, "_blank");
+                        }}
+                        className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary-glow"
+                      >
+                        <MessageCircle className="h-5 w-5" />
+                        WhatsApp
+                      </Button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default ProductInquiry;

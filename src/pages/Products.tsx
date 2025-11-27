@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
@@ -234,6 +235,12 @@ const Products = () => {
     : products.filter(p => p.category === activeTab);
 
   return (
+    <>
+      <Helmet>
+        <title>All Products | Custom Cakes, Brownies & Desserts | IBakers Chennai</title>
+        <meta name="description" content="Browse all cake products from IBakers Chennai. Birthday cakes, wedding cakes, trending designs, brownies, desserts & more. Fresh home-made with same-day delivery." />
+        <link rel="canonical" href="https://www.ibakers.com/products" />
+      </Helmet>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -303,6 +310,7 @@ const Products = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
