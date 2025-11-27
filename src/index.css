@@ -8,107 +8,112 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Warm, inviting bakery color palette */
-    --background: 32 40% 98%;
-    --foreground: 25 20% 20%;
+    /* Modern vibrant bakery color palette - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 25 20% 20%;
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 20% 20%;
+    --popover-foreground: 240 10% 15%;
 
-    /* Rose pink - main brand color */
-    --primary: 345 75% 65%;
+    /* Vibrant pink/rose - main brand color */
+    --primary: 340 82% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 345 85% 75%;
+    --primary-glow: 340 100% 68%;
+    --primary-dark: 340 82% 42%;
 
-    /* Cream beige - elegant secondary */
-    --secondary: 32 30% 92%;
-    --secondary-foreground: 25 20% 20%;
+    /* Soft peach - elegant secondary */
+    --secondary: 25 95% 90%;
+    --secondary-foreground: 240 10% 15%;
 
-    /* Soft muted tones */
-    --muted: 32 25% 95%;
-    --muted-foreground: 25 15% 50%;
+    /* Neutral muted tones */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
 
-    /* Gold accent for premium feel */
-    --accent: 42 78% 60%;
-    --accent-foreground: 25 20% 20%;
+    /* Warm amber accent */
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 32 25% 88%;
-    --input: 32 25% 88%;
-    --ring: 345 75% 65%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 340 82% 52%;
 
     --radius: 0.75rem;
     
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(345 75% 65%), hsl(345 85% 75%));
-    --gradient-subtle: linear-gradient(180deg, hsl(32 40% 98%), hsl(32 30% 96%));
+    /* Beautiful gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(340 82% 52%) 0%, hsl(340 100% 68%) 50%, hsl(38 92% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(25 95% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(240 5% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(340 82% 52%), hsl(340 100% 68%));
     
-    /* Shadows with rose tint */
-    --shadow-elegant: 0 10px 40px -10px hsl(345 75% 65% / 0.2);
-    --shadow-soft: 0 4px 20px -4px hsl(25 20% 20% / 0.1);
+    /* Elegant shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(340 82% 52% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(240 10% 15% / 0.08);
+    --shadow-glow: 0 0 30px hsl(340 100% 68% / 0.3);
     
-    /* Transitions */
+    /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 340 82% 52%;
   }
 
   .dark {
-    --background: 25 30% 12%;
-    --foreground: 32 40% 95%;
+    /* Modern dark mode palette */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 25 25% 16%;
-    --card-foreground: 32 40% 95%;
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 25 25% 16%;
-    --popover-foreground: 32 40% 95%;
+    --popover: 240 8% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 345 75% 65%;
+    --primary: 340 82% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 345 85% 75%;
+    --primary-glow: 340 100% 68%;
+    --primary-dark: 340 82% 42%;
 
-    --secondary: 25 20% 20%;
-    --secondary-foreground: 32 40% 95%;
+    --secondary: 240 6% 18%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 25 20% 20%;
-    --muted-foreground: 32 25% 65%;
+    --muted: 240 6% 16%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 42 78% 60%;
+    --accent: 38 92% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 50%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 25 20% 25%;
-    --input: 25 20% 25%;
-    --ring: 345 75% 65%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 340 82% 52%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(340 82% 52%) 0%, hsl(340 100% 68%) 50%, hsl(38 92% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(240 10% 8%) 0%, hsl(240 8% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240 8% 12%) 0%, hsl(240 6% 16%) 100%);
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 340 82% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 340 82% 52%;
   }
 }
 
@@ -136,6 +141,14 @@ All colors MUST be HSL.
     background: var(--gradient-subtle);
   }
   
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
@@ -144,7 +157,24 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-soft);
   }
   
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Beautiful hover effects */
+  .hover-lift {
+    @apply transition-smooth hover:shadow-elegant hover:-translate-y-1;
+  }
+  
+  .hover-glow {
+    @apply transition-smooth hover:shadow-glow;
   }
 }
