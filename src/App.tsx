@@ -19,6 +19,10 @@ import FlavourCakes from "./pages/categories/FlavourCakes";
 import ChristmasSpecials from "./pages/categories/ChristmasSpecials";
 import BrowniesDesserts from "./pages/categories/BrowniesDesserts";
 import SpecialtyCakes from "./pages/categories/SpecialtyCakes";
+import AnniversaryCakes from "./pages/categories/AnniversaryCakes";
+import Desserts from "./pages/Desserts";
+import Hampers from "./pages/Hampers";
+import FestiveCakes from "./pages/FestiveCakes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +46,10 @@ const App = () => (
           <Route path="/categories/christmas-specials" element={<ChristmasSpecials />} />
           <Route path="/categories/brownies-desserts" element={<BrowniesDesserts />} />
           <Route path="/categories/specialty-cakes" element={<SpecialtyCakes />} />
+          <Route path="/categories/anniversary-cakes" element={<AnniversaryCakes />} />
+          <Route path="/desserts" element={<Desserts />} />
+          <Route path="/hampers" element={<Hampers />} />
+          <Route path="/festive-cakes" element={<FestiveCakes />} />
           <Route path="/masterclasses" element={<Masterclasses />} />
           <Route path="/custom-orders" element={<CustomOrders />} />
           <Route path="/gallery" element={<Gallery />} />
