@@ -9,6 +9,14 @@ import browniesImage from "@/assets/brownies.jpg";
 import weddingCakeImage from "@/assets/wedding-cake.jpg";
 import kidsBirthdayImage from "@/assets/kids-birthday.jpg";
 import christmasCakeImage from "@/assets/christmas-cake.jpg";
+import heartShapedImage from "@/assets/heart-shaped-cake.jpg";
+import pinataCakeImage from "@/assets/pinata-cake.jpg";
+import dripCakeImage from "@/assets/drip-cake.jpg";
+import unicornCakeImage from "@/assets/unicorn-cake.jpg";
+import butterscotchImage from "@/assets/butterscotch-cake.jpg";
+import blackForestImage from "@/assets/black-forest-cake.jpg";
+import jarCakesImage from "@/assets/jar-cakes.jpg";
+import cupcakesImage from "@/assets/cupcakes.jpg";
 
 const Products = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -50,9 +58,65 @@ const Products = () => {
       image: heroImage,
       category: "Birthday Cakes",
     },
-    // Wedding Cakes
     {
       id: "5",
+      title: "Heart-Shaped Delight",
+      description: "Romantic heart-shaped cake perfect for celebrations",
+      price: "₹950",
+      image: heartShapedImage,
+      category: "Birthday Cakes",
+      isNew: true,
+    },
+    // Trending Cakes
+    {
+      id: "6",
+      title: "Pinata Surprise Cake",
+      description: "Break open to reveal colorful candy surprise inside",
+      price: "₹1,500",
+      image: pinataCakeImage,
+      category: "Trending Cakes",
+      isBestseller: true,
+    },
+    {
+      id: "7",
+      title: "Drip Cake Deluxe",
+      description: "Elegant drip design with macarons and fresh berries",
+      price: "₹1,400",
+      image: dripCakeImage,
+      category: "Trending Cakes",
+      isNew: true,
+    },
+    // Theme Cakes
+    {
+      id: "8",
+      title: "Magical Unicorn Cake",
+      description: "Adorable unicorn design with rainbow colors",
+      price: "₹1,600",
+      image: unicornCakeImage,
+      category: "Theme Cakes",
+      isBestseller: true,
+    },
+    // Flavor Cakes
+    {
+      id: "9",
+      title: "Butterscotch Bliss",
+      description: "Creamy butterscotch layers with caramel drizzle",
+      price: "₹800",
+      image: butterscotchImage,
+      category: "By Flavour",
+      isBestseller: true,
+    },
+    {
+      id: "10",
+      title: "Black Forest Classic",
+      description: "Traditional black forest with cherries and chocolate",
+      price: "₹900",
+      image: blackForestImage,
+      category: "By Flavour",
+    },
+    // Wedding Cakes
+    {
+      id: "11",
       title: "Wedding Bliss 3-Tier",
       description: "Elegant 3-tier wedding cake with fresh flowers",
       price: "₹8,500",
@@ -60,7 +124,7 @@ const Products = () => {
       category: "Wedding Cakes",
     },
     {
-      id: "6",
+      id: "12",
       title: "Royal Wedding Cake",
       description: "5-tier masterpiece with gold accents",
       price: "₹15,000",
@@ -70,7 +134,7 @@ const Products = () => {
     },
     // Christmas Specials
     {
-      id: "7",
+      id: "13",
       title: "Traditional Fruit Cake",
       description: "Rich fruit cake soaked in rum with nuts",
       price: "₹1,200",
@@ -79,7 +143,7 @@ const Products = () => {
       isBestseller: true,
     },
     {
-      id: "8",
+      id: "14",
       title: "Plum Cake",
       description: "Classic Christmas plum cake with candied fruits",
       price: "₹950",
@@ -88,25 +152,45 @@ const Products = () => {
     },
     // Brownies
     {
-      id: "9",
+      id: "15",
       title: "Classic Fudge Brownies",
       description: "Dense, chocolaty perfection in every bite",
       price: "₹350",
       image: browniesImage,
-      category: "Brownies",
+      category: "Brownies & Desserts",
       isBestseller: true,
     },
     {
-      id: "10",
+      id: "16",
       title: "Cream Cheese Brownies",
       description: "Fudgy brownies with tangy cream cheese swirl",
       price: "₹400",
       image: browniesImage,
-      category: "Brownies",
+      category: "Brownies & Desserts",
+    },
+    // Jar Cakes
+    {
+      id: "17",
+      title: "Assorted Jar Cakes",
+      description: "Layered cake desserts in convenient glass jars",
+      price: "₹300",
+      image: jarCakesImage,
+      category: "Brownies & Desserts",
+      isNew: true,
+    },
+    // Cupcakes
+    {
+      id: "18",
+      title: "Gourmet Cupcakes Box",
+      description: "Assorted flavors with premium frosting",
+      price: "₹600",
+      image: cupcakesImage,
+      category: "Brownies & Desserts",
+      isBestseller: true,
     },
     // Specialty Cakes
     {
-      id: "11",
+      id: "19",
       title: "Eggless Chocolate Cake",
       description: "Just as delicious, completely eggless",
       price: "₹900",
@@ -114,11 +198,20 @@ const Products = () => {
       category: "Specialty Cakes",
     },
     {
-      id: "12",
+      id: "20",
       title: "Sugar-Free Delight",
       description: "Diabetic-friendly cake without compromising taste",
       price: "₹1,100",
       image: heroImage,
+      category: "Specialty Cakes",
+      isNew: true,
+    },
+    {
+      id: "21",
+      title: "Vegan Chocolate Cake",
+      description: "100% plant-based, rich chocolate flavor",
+      price: "₹1,050",
+      image: browniesImage,
       category: "Specialty Cakes",
       isNew: true,
     },
@@ -127,9 +220,12 @@ const Products = () => {
   const categories = [
     { value: "all", label: "All Products" },
     { value: "Birthday Cakes", label: "Birthday Cakes" },
+    { value: "Trending Cakes", label: "Trending Cakes" },
+    { value: "Theme Cakes", label: "Theme Cakes" },
+    { value: "By Flavour", label: "By Flavour" },
     { value: "Wedding Cakes", label: "Wedding Cakes" },
     { value: "Christmas Specials", label: "Christmas Specials" },
-    { value: "Brownies", label: "Brownies" },
+    { value: "Brownies & Desserts", label: "Brownies & Desserts" },
     { value: "Specialty Cakes", label: "Specialty Cakes" },
   ];
 
