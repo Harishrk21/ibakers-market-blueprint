@@ -24,10 +24,14 @@ const Header = () => {
 
   const categoryLinks = [
     { to: "/categories/birthday-cakes", label: "Birthday Cakes" },
+    { to: "/categories/anniversary-cakes", label: "Anniversary Cakes" },
     { to: "/categories/wedding-cakes", label: "Wedding Cakes" },
     { to: "/categories/trending-cakes", label: "Trending Cakes" },
     { to: "/categories/theme-cakes", label: "Theme Cakes" },
     { to: "/categories/flavour-cakes", label: "By Flavour" },
+    { to: "/desserts", label: "Desserts" },
+    { to: "/hampers", label: "Hampers" },
+    { to: "/festive-cakes", label: "Festive Cakes" },
     { to: "/categories/christmas-specials", label: "Christmas Specials" },
     { to: "/categories/brownies-desserts", label: "Brownies & Desserts" },
     { to: "/categories/specialty-cakes", label: "Specialty Cakes" },
