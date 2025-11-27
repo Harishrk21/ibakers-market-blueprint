@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Menu, X, Phone, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, MessageCircle, ChevronDown, Cake, Heart, Sparkles, Gift, PartyPopper, Crown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -23,18 +23,18 @@ const Header = () => {
   ];
 
   const categoryLinks = [
-    { to: "/categories/birthday-cakes", label: "Birthday Cakes" },
-    { to: "/categories/anniversary-cakes", label: "Anniversary Cakes" },
-    { to: "/categories/wedding-cakes", label: "Wedding Cakes" },
-    { to: "/categories/trending-cakes", label: "Trending Cakes" },
-    { to: "/categories/theme-cakes", label: "Theme Cakes" },
-    { to: "/categories/flavour-cakes", label: "By Flavour" },
-    { to: "/desserts", label: "Desserts" },
-    { to: "/hampers", label: "Hampers" },
-    { to: "/festive-cakes", label: "Festive Cakes" },
-    { to: "/categories/christmas-specials", label: "Christmas Specials" },
-    { to: "/categories/brownies-desserts", label: "Brownies & Desserts" },
-    { to: "/categories/specialty-cakes", label: "Specialty Cakes" },
+    { to: "/categories/birthday-cakes", label: "Birthday Cakes", icon: Cake },
+    { to: "/categories/anniversary-cakes", label: "Anniversary Cakes", icon: Heart },
+    { to: "/categories/wedding-cakes", label: "Wedding Cakes", icon: Crown },
+    { to: "/categories/trending-cakes", label: "Trending Cakes", icon: Sparkles },
+    { to: "/categories/theme-cakes", label: "Theme Cakes", icon: PartyPopper },
+    { to: "/categories/flavour-cakes", label: "By Flavour", icon: Cake },
+    { to: "/desserts", label: "Desserts", icon: Gift },
+    { to: "/hampers", label: "Hampers", icon: Gift },
+    { to: "/festive-cakes", label: "Festive Cakes", icon: Sparkles },
+    { to: "/categories/christmas-specials", label: "Christmas Specials", icon: PartyPopper },
+    { to: "/categories/brownies-desserts", label: "Brownies & Desserts", icon: Gift },
+    { to: "/categories/specialty-cakes", label: "Specialty Cakes", icon: Crown },
   ];
 
   const otherLinks = [
@@ -87,16 +87,22 @@ const Header = () => {
                         </p>
                       </Link>
                     </div>
-                    {categoryLinks.map((category) => (
-                      <NavigationMenuLink key={category.to} asChild>
-                        <Link
-                          to={category.to}
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">{category.label}</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    ))}
+                    {categoryLinks.map((category) => {
+                      const Icon = category.icon;
+                      return (
+                        <NavigationMenuLink key={category.to} asChild>
+                          <Link
+                            to={category.to}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="flex items-center gap-2">
+                              <Icon className="h-4 w-4 text-primary" />
+                              <div className="text-sm font-medium leading-none">{category.label}</div>
+                            </div>
+                          </Link>
+                        </NavigationMenuLink>
+                      );
+                    })}
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -120,7 +126,7 @@ const Header = () => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => window.open("tel:+919876543210")}
+            onClick={() => window.open("tel:+918825471551")}
             className="flex items-center gap-2"
           >
             <Phone className="h-4 w-4" />
@@ -128,7 +134,7 @@ const Header = () => {
           </Button>
           <Button
             size="sm"
-            onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+            onClick={() => window.open("https://wa.me/918825471551", "_blank")}
             className="flex items-center gap-2 bg-primary hover:bg-primary-glow"
           >
             <MessageCircle className="h-4 w-4" />
@@ -218,7 +224,7 @@ const Header = () => {
             <Button
               variant="outline"
               onClick={() => {
-                window.open("tel:+919876543210");
+                window.open("tel:+918825471551");
                 setMobileMenuOpen(false);
               }}
               className="w-full flex items-center justify-center gap-2"
@@ -228,7 +234,7 @@ const Header = () => {
             </Button>
             <Button
               onClick={() => {
-                window.open("https://wa.me/919876543210", "_blank");
+                window.open("https://wa.me/918825471551", "_blank");
                 setMobileMenuOpen(false);
               }}
               className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-glow"
