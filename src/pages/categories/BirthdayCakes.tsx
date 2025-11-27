@@ -1,60 +1,147 @@
 import { Helmet } from "react-helmet";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
+import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cake.jpg";
 import browniesImage from "@/assets/brownies.jpg";
 import kidsBirthdayImage from "@/assets/kids-birthday.jpg";
 import heartShapedImage from "@/assets/heart-shaped-cake.jpg";
+import firstBirthdayImage from "@/assets/1st-birthday-cake.jpg";
+import photoCakeImage from "@/assets/photo-cake.jpg";
+import characterCakeImage from "@/assets/character-cake.jpg";
+import grownUpCakeImage from "@/assets/grown-up-cake.jpg";
 
 const BirthdayCakes = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
   const products = [
     {
       id: "1",
-      title: "Chocolate Truffle Cake",
-      description: "Rich, decadent chocolate layers with smooth truffle frosting",
-      price: "₹850",
-      image: browniesImage,
+      title: "1st Birthday Smash Cake",
+      description: "Adorable cake for baby's first birthday milestone",
+      price: "₹1,200",
+      image: firstBirthdayImage,
       category: "Birthday Cakes",
+      subCategory: "1st Birthday",
       isBestseller: true,
     },
     {
       id: "2",
-      title: "Red Velvet Elegance",
-      description: "Classic red velvet with cream cheese frosting",
-      price: "₹900",
-      image: heroImage,
+      title: "Baby's 1st Year Celebration",
+      description: "Pastel colors with number 1 topper",
+      price: "₹1,100",
+      image: firstBirthdayImage,
       category: "Birthday Cakes",
+      subCategory: "1st Birthday",
       isNew: true,
     },
     {
       id: "3",
+      title: "Custom Photo Birthday Cake",
+      description: "Your favorite photo printed on delicious cake",
+      price: "₹1,000",
+      image: photoCakeImage,
+      category: "Birthday Cakes",
+      subCategory: "Photo Cakes",
+      isBestseller: true,
+    },
+    {
+      id: "4",
+      title: "Edible Photo Rectangle Cake",
+      description: "Large rectangular cake perfect for photo prints",
+      price: "₹1,100",
+      image: photoCakeImage,
+      category: "Birthday Cakes",
+      subCategory: "Photo Cakes",
+    },
+    {
+      id: "5",
+      title: "Superhero Character Cake",
+      description: "Kids' favorite superhero characters in fondant",
+      price: "₹1,500",
+      image: characterCakeImage,
+      category: "Birthday Cakes",
+      subCategory: "Theme Cakes",
+      isBestseller: true,
+    },
+    {
+      id: "6",
+      title: "Princess Theme Cake",
+      description: "Beautiful princess castle design for little girls",
+      price: "₹1,600",
+      image: characterCakeImage,
+      category: "Birthday Cakes",
+      subCategory: "Theme Cakes",
+    },
+    {
+      id: "7",
       title: "Kids Birthday Special",
       description: "Fun cartoon character designs your kids will love",
       price: "₹1,200",
       image: kidsBirthdayImage,
       category: "Birthday Cakes",
+      subCategory: "Theme Cakes",
       isBestseller: true,
     },
     {
-      id: "4",
-      title: "Photo Cake",
-      description: "Your favorite photo printed on delicious cake",
-      price: "₹1,000",
-      image: heroImage,
+      id: "8",
+      title: "Chocolate Truffle Cake",
+      description: "Rich, decadent chocolate layers with smooth truffle frosting",
+      price: "₹850",
+      image: browniesImage,
       category: "Birthday Cakes",
+      subCategory: "Classic",
+      isBestseller: true,
     },
     {
-      id: "5",
+      id: "9",
+      title: "Red Velvet Elegance",
+      description: "Classic red velvet with cream cheese frosting",
+      price: "₹900",
+      image: heroImage,
+      category: "Birthday Cakes",
+      subCategory: "Classic",
+      isNew: true,
+    },
+    {
+      id: "10",
+      title: "Elegant Black & Gold Cake",
+      description: "Sophisticated design perfect for adult birthdays",
+      price: "₹1,300",
+      image: grownUpCakeImage,
+      category: "Birthday Cakes",
+      subCategory: "Adult Birthday",
+      isBestseller: true,
+    },
+    {
+      id: "11",
+      title: "Minimalist Modern Cake",
+      description: "Sleek contemporary design for grown-up celebrations",
+      price: "₹1,200",
+      image: grownUpCakeImage,
+      category: "Birthday Cakes",
+      subCategory: "Adult Birthday",
+    },
+    {
+      id: "12",
       title: "Heart-Shaped Delight",
       description: "Romantic heart-shaped cake perfect for celebrations",
       price: "₹950",
       image: heartShapedImage,
       category: "Birthday Cakes",
+      subCategory: "Classic",
       isNew: true,
     },
   ];
+
+  const filterCategories = ["1st Birthday", "Photo Cakes", "Theme Cakes", "Adult Birthday", "Classic"];
+
+  const filteredProducts = activeFilter === "All"
+    ? products
+    : products.filter(p => p.subCategory === activeFilter);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -144,8 +231,13 @@ const BirthdayCakes = () => {
         {/* Products Grid */}
         <section className="py-12">
           <div className="container mx-auto px-4">
+            <FilterBar
+              categories={filterCategories}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+            />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {products.map((product) => (
+              {filteredProducts.map((product) => (
                 <ProductCard key={product.id} {...product} />
               ))}
             </div>

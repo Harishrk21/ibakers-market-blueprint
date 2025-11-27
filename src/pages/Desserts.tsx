@@ -1,0 +1,202 @@
+import { Helmet } from "react-helmet";
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ProductCard from "@/components/ProductCard";
+import FilterBar from "@/components/FilterBar";
+import { Button } from "@/components/ui/button";
+import pastriesImage from "@/assets/pastries.jpg";
+import cheesecakeImage from "@/assets/cheesecake.jpg";
+import jarCakesImage from "@/assets/jar-cakes.jpg";
+import cupcakesImage from "@/assets/cupcakes.jpg";
+import browniesImage from "@/assets/brownies.jpg";
+import teaCakesImage from "@/assets/tea-cakes.jpg";
+
+const Desserts = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const products = [
+    {
+      id: "d1",
+      title: "Assorted Pastries Box",
+      description: "Gourmet pastries with eclairs, tarts, and danishes",
+      price: "₹650",
+      image: pastriesImage,
+      category: "Desserts",
+      subCategory: "Pastries",
+      isBestseller: true,
+    },
+    {
+      id: "d2",
+      title: "Blueberry Cheesecake",
+      description: "Creamy New York-style cheesecake with berry topping",
+      price: "₹550",
+      image: cheesecakeImage,
+      category: "Desserts",
+      subCategory: "Cheesecakes",
+      isNew: true,
+    },
+    {
+      id: "d3",
+      title: "Chocolate Cheesecake",
+      description: "Rich chocolate cheesecake with chocolate ganache",
+      price: "₹600",
+      image: cheesecakeImage,
+      category: "Desserts",
+      subCategory: "Cheesecakes",
+    },
+    {
+      id: "d4",
+      title: "Layered Jar Cakes (Set of 4)",
+      description: "Individual dessert jars perfect for parties",
+      price: "₹400",
+      image: jarCakesImage,
+      category: "Desserts",
+      subCategory: "Jar Cakes",
+      isBestseller: true,
+    },
+    {
+      id: "d5",
+      title: "Premium Cupcakes (Box of 6)",
+      description: "Assorted flavors with buttercream frosting",
+      price: "₹450",
+      image: cupcakesImage,
+      category: "Desserts",
+      subCategory: "Cupcakes",
+    },
+    {
+      id: "d6",
+      title: "Cupcakes Party Pack (12pc)",
+      description: "Perfect for birthdays and celebrations",
+      price: "₹800",
+      image: cupcakesImage,
+      category: "Desserts",
+      subCategory: "Cupcakes",
+      isBestseller: true,
+    },
+    {
+      id: "d7",
+      title: "Classic Fudge Brownies",
+      description: "Dense, chocolaty perfection in every bite",
+      price: "₹350",
+      image: browniesImage,
+      category: "Desserts",
+      subCategory: "Brownies",
+      isBestseller: true,
+    },
+    {
+      id: "d8",
+      title: "Lemon Pound Cake",
+      description: "Moist lemon cake perfect with tea",
+      price: "₹450",
+      image: teaCakesImage,
+      category: "Desserts",
+      subCategory: "Tea Cakes",
+    },
+    {
+      id: "d9",
+      title: "Marble Tea Cake",
+      description: "Classic marble cake with vanilla and chocolate swirl",
+      price: "₹400",
+      image: teaCakesImage,
+      category: "Desserts",
+      subCategory: "Tea Cakes",
+    },
+  ];
+
+  const filterCategories = ["Pastries", "Cheesecakes", "Jar Cakes", "Cupcakes", "Brownies", "Tea Cakes"];
+
+  const filteredProducts = activeFilter === "All"
+    ? products
+    : products.filter(p => p.subCategory === activeFilter);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Desserts in Chennai | IBakers",
+    "description": "Order fresh pastries, cheesecakes, jar cakes, cupcakes, brownies and tea cakes in Chennai. Perfect for gifting and celebrations. Home-made quality delivered.",
+    "url": "https://www.ibakers.com/desserts"
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Desserts in Chennai | Pastries, Cheesecakes, Cupcakes | IBakers</title>
+        <meta name="description" content="Order fresh desserts in Chennai - pastries, cheesecakes, jar cakes, cupcakes, brownies & tea cakes. Perfect for gifting and parties. Same-day delivery available across Chennai." />
+        <meta name="keywords" content="desserts Chennai, pastries Chennai, cheesecakes Chennai, cupcakes Chennai, jar cakes Chennai, brownies Chennai, tea cakes Chennai, dessert boxes Chennai" />
+        <link rel="canonical" href="https://www.ibakers.com/desserts" />
+        
+        <meta property="og:title" content="Desserts in Chennai | Pastries, Cheesecakes, Cupcakes" />
+        <meta property="og:image" content={pastriesImage} />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        <section className="py-20 bg-gradient-subtle">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <h1 className="text-5xl md:text-6xl font-bold">
+                Delicious <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Desserts</span> in Chennai
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                From pastries to cheesecakes, cupcakes to brownies - indulge in our fresh dessert collection
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-background">
+          <article className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl font-bold mb-6">Fresh Desserts Delivered Across Chennai</h2>
+            <p className="text-muted-foreground mb-4">
+              IBakers offers a delightful range of desserts in Chennai perfect for every occasion. From gourmet pastries and creamy cheesecakes to convenient jar cakes and premium cupcakes, each dessert is crafted fresh with quality ingredients. Our collection includes classic fudge brownies, tea cakes perfect for your evening chai, and beautifully packaged dessert boxes ideal for corporate gifting.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Whether you're looking for party treats, gifting options, or just a sweet indulgence, our desserts are made to order and delivered fresh across Chennai including Adyar, T Nagar, Velachery, Anna Nagar, and OMR areas.
+            </p>
+          </article>
+        </section>
+
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <FilterBar
+              categories={filterCategories}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+            />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredProducts.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-hero text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Need Desserts for Your Event?</h2>
+            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+              Bulk orders available for parties, corporate events and celebrations
+            </p>
+            <Button
+              size="lg"
+              variant="secondary"
+              onClick={() => window.location.href = "/custom-orders"}
+            >
+              Order Bulk Desserts
+            </Button>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Desserts;
