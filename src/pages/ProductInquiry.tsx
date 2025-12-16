@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, MessageCircle } from "lucide-react";
+import { WHATSAPP_PHONE, WHATSAPP_MESSAGE } from "@/constants/whatsapp";
 
 const ProductInquiry = () => {
   const location = useLocation();
@@ -65,10 +66,17 @@ const ProductInquiry = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
-        <section className="py-20">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12">
@@ -96,17 +104,17 @@ const ProductInquiry = () => {
                 {/* Product Details & Form */}
                 <div className="space-y-8">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-2">{product.category}</p>
-                    <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
-                    <p className="text-xl text-muted-foreground mb-6">{product.description}</p>
-                    <p className="text-3xl font-bold text-primary">{product.price}</p>
+                    <p className="text-sm text-slate-400 mb-2">{product.category}</p>
+                    <h1 className="text-4xl md:text-5xl font-black mb-4 text-white">{product.title}</h1>
+                    <p className="text-xl text-slate-300 mb-6">{product.description}</p>
+                    <p className="text-3xl font-bold text-pink-400">{product.price}</p>
                   </div>
 
                   {/* Order Form */}
                   <form
                     action="https://formsubmit.co/harishradhakrishnan2001@gmail.com"
                     method="POST"
-                    className="space-y-6 bg-card p-8 rounded-2xl border border-border"
+                    className="space-y-6 bg-slate-900/50 backdrop-blur-xl p-8 rounded-2xl border border-white/10"
                   >
                     <input type="hidden" name="_subject" value={`New Order Inquiry: ${product.title}`} />
                     <input type="hidden" name="_captcha" value="false" />
@@ -115,7 +123,7 @@ const ProductInquiry = () => {
                     <input type="hidden" name="Product Price" value={product.price} />
                     <input type="hidden" name="Category" value={product.category} />
 
-                    <h2 className="text-2xl font-bold">Order This Cake</h2>
+                    <h2 className="text-2xl md:text-3xl font-black text-white">Order This Cake</h2>
 
                     <div className="space-y-2">
                       <Label htmlFor="name">Your Name *</Label>
@@ -180,7 +188,7 @@ const ProductInquiry = () => {
                         min={new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
                         className="w-full"
                       />
-                      <p className="text-xs text-muted-foreground">Minimum 3 days advance notice required</p>
+                      <p className="text-xs text-slate-400">Minimum 3 days advance notice required</p>
                     </div>
 
                     <div className="space-y-2">
@@ -205,33 +213,33 @@ const ProductInquiry = () => {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
+                    <button 
+                      type="submit" 
+                      className="w-full px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg font-semibold text-base hover:scale-105 transition-transform shadow-2xl shadow-pink-500/50"
+                    >
                       Send Order Inquiry
-                    </Button>
+                    </button>
 
                     <div className="flex gap-3">
-                      <Button
+                      <button
                         type="button"
-                        variant="outline"
-                        size="lg"
-                        onClick={() => window.open("tel:+919876543210")}
-                        className="flex-1 flex items-center justify-center gap-2"
+                        onClick={() => window.open("tel:+918825471551")}
+                        className="flex-1 px-6 py-4 bg-slate-800/50 backdrop-blur-sm border border-white/30 text-white rounded-lg font-semibold text-base hover:bg-slate-700 hover:border-white/40 transition-all flex items-center justify-center gap-2"
                       >
                         <Phone className="h-5 w-5" />
                         Call to Order
-                      </Button>
-                      <Button
+                      </button>
+                      <button
                         type="button"
-                        size="lg"
                         onClick={() => {
-                          const msg = `Hi! I'm interested in ordering *${product.title}* (${product.price}) from your ${product.category} collection. Please share more details.`;
-                          window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, "_blank");
+                          const msg = `${WHATSAPP_MESSAGE}\n\nI'm interested in ordering *${product.title}* (${product.price}) from your ${product.category} collection.`;
+                          window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`, "_blank");
                         }}
-                        className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary-glow"
+                        className="flex-1 px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg font-semibold text-base hover:scale-105 transition-transform shadow-2xl shadow-pink-500/50 flex items-center justify-center gap-2"
                       >
                         <MessageCircle className="h-5 w-5" />
                         WhatsApp
-                      </Button>
+                      </button>
                     </div>
                   </form>
                 </div>

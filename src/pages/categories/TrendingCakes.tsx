@@ -17,7 +17,7 @@ const TrendingCakes = () => {
       title: "Pinata Surprise Cake",
       description: "Break open to reveal colorful candy surprise inside",
       price: "₹1,500",
-      image: pinataCakeImage,
+      image: "https://bkmedia.bakingo.com/sq-birthday-chocolate-overload-pinata-cake-750gm-pina2163choc-A_0.jpg",
       category: "Trending Cakes",
       isBestseller: true,
     },
@@ -35,25 +35,25 @@ const TrendingCakes = () => {
       title: "Pull Me Up Cake",
       description: "Interactive cake with surprise pull-up design",
       price: "₹1,600",
-      image: pinataCakeImage,
+      image: "https://bkmedia.bakingo.com/sq-pull-me-up-choco-truffle-cake-pulm1813choc-A_0.jpg?tr=w-665,h-665,dpr-1.5&q=50",
       category: "Trending Cakes",
       isBestseller: true,
     },
     {
-      id: "t4",
-      title: "Bento Cake Mini Delight",
-      description: "Trendy Korean-style mini decorated cake",
+      id: "bento-1",
+      title: "Bento Cake",
+      description: "Trendy Korean-style mini decorated cake perfect for individual servings",
       price: "₹450",
-      image: jarCakesImage,
+      image: "/bento.png",
       category: "Trending Cakes",
-      isNew: true,
+      isBestseller: true,
     },
     {
       id: "t5",
       title: "Money Pulling Cake",
       description: "Fun cake that pulls out cash notes surprise",
       price: "₹1,700",
-      image: pinataCakeImage,
+      image: "https://m.media-amazon.com/images/I/51FXjhMEbCL.jpg",
       category: "Trending Cakes",
       isBestseller: true,
     },
@@ -62,7 +62,7 @@ const TrendingCakes = () => {
       title: "Ribbon Cake Elegance",
       description: "Beautiful ribbon layers in pastel colors",
       price: "₹1,350",
-      image: unicornCakeImage,
+      image: "https://i0.wp.com/letsbake.ca/wp-content/uploads/2025/10/IMG_7996-scaled.jpeg?fit=1920%2C2560&ssl=1",
       category: "Trending Cakes",
     },
     {
@@ -70,7 +70,7 @@ const TrendingCakes = () => {
       title: "Number Cake Trending",
       description: "Instagram-worthy number shaped cream cake",
       price: "₹1,250",
-      image: dripCakeImage,
+      image: "https://simplebites.net/wp-content/uploads/2018/02/Final-icebox--e1519694712881-500x500.jpg",
       category: "Trending Cakes",
       isBestseller: true,
     },
@@ -79,7 +79,7 @@ const TrendingCakes = () => {
       title: "Cream Explosion Cake",
       description: "Viral cream bomb cake with surprise filling",
       price: "₹1,550",
-      image: dripCakeImage,
+      image: "https://browniepointindia.com/cdn/shop/products/surpriseexplosioncake1.jpg?v=1669295598",
       category: "Trending Cakes",
       isNew: true,
     },
@@ -88,7 +88,7 @@ const TrendingCakes = () => {
       title: "Rasgulla Cake Fusion",
       description: "Trending fusion of traditional rasgulla & cake",
       price: "₹1,200",
-      image: heartShapedImage,
+      image: "https://www.cakesworld.in/images/web/fusioncake_04.jpg",
       category: "Trending Cakes",
       isBestseller: true,
     },
@@ -97,7 +97,7 @@ const TrendingCakes = () => {
       title: "Chocolate Bomb Cake",
       description: "Hot chocolate bomb reveals hidden surprise",
       price: "₹1,650",
-      image: browniesImage,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPIUZrQBq7AKI9WLey-bgHbloTThJpSsZovA&s",
       category: "Trending Cakes",
       isNew: true,
     },
@@ -115,7 +115,7 @@ const TrendingCakes = () => {
       title: "Fruit Bomb Explosion",
       description: "Fresh fruit explosion trending design",
       price: "₹1,400",
-      image: heartShapedImage,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLHX_JsTvqbesKXC4iYt9ZzF5RCJ_diQgdGQ&s",
       category: "Trending Cakes",
     },
     {
@@ -123,7 +123,7 @@ const TrendingCakes = () => {
       title: "Camera Cake Instagram",
       description: "Perfect for photography lovers & influencers",
       price: "₹1,550",
-      image: dripCakeImage,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY7XwX1hBFMlfZ13NEtOBd-sDg90kN204gtg&s",
       category: "Trending Cakes",
       isNew: true,
     },
@@ -132,7 +132,7 @@ const TrendingCakes = () => {
       title: "Letter Cake Personalized",
       description: "Trendy letter-shaped cake with toppings",
       price: "₹1,300",
-      image: dripCakeImage,
+      image: "https://cakestry15.com/cdn/shop/files/Alphabet_R_2kg_Chocolate_Cake_cakestry15noida_full_image.webp?v=1746792302&width=1946",
       category: "Trending Cakes",
     },
     {
@@ -140,7 +140,7 @@ const TrendingCakes = () => {
       title: "Gourmet Overload Cake",
       description: "Loaded with premium toppings & decorations",
       price: "₹1,800",
-      image: browniesImage,
+      image: "https://www.dreamadozen.com/cdn/shop/files/chocolate-overload-cake2.jpg?v=1757418354&width=1024",
       category: "Trending Cakes",
       isBestseller: true,
     },
@@ -149,7 +149,7 @@ const TrendingCakes = () => {
       title: "Bento Box Set (4 Mini Cakes)",
       description: "Set of 4 Korean-style bento cakes",
       price: "₹1,600",
-      image: jarCakesImage,
+      image: "https://vinayakdefoodmart.com/cdn/shop/files/M100_Bento_Cake_Box.jpg?v=1751971081",
       category: "Trending Cakes",
       isNew: true,
     },
@@ -158,18 +158,10 @@ const TrendingCakes = () => {
       title: "Cricket Theme Trending",
       description: "Perfect for cricket fans & IPL celebrations",
       price: "₹1,450",
-      image: pinataCakeImage,
+      image: "https://cakestry15.com/cdn/shop/files/Cricket_Celebration_Cake_pne_kg_chocolate_11th_birthday_cake_for_a_boy_by_cakestry15_noida_cake_full_image.webp?v=1747727730&width=1200",
       category: "Trending Cakes",
     },
-    {
-      id: "t18",
-      title: "Money Cake Gold Edition",
-      description: "Luxury money pulling cake with gold accents",
-      price: "₹2,000",
-      image: dripCakeImage,
-      category: "Trending Cakes",
-      isBestseller: true,
-    },
+    
   ];
 
   const structuredData = {
@@ -196,29 +188,36 @@ const TrendingCakes = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Trending <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Cakes</span> in Chennai
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
+                Trending <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Cakes</span> in Chennai
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 Stay ahead with the latest viral cake designs and Instagram-worthy creations
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-12 relative">
           <article className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">Latest Trending Cake Designs in Chennai</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-black mb-6">Latest Trending Cake Designs in Chennai</h2>
+            <p className="text-slate-300 mb-4">
               IBakers brings you the hottest cake trends in Chennai! From viral pinata surprise cakes that reveal colorful candies when broken, to elegant drip cakes adorned with macarons and berries, trendy Korean bento cakes, interactive pull-me-up cakes, and exciting money pulling cakes - we create Instagram-worthy cakes that make your celebrations extra special.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-300 mb-4">
               Our trending collection features the most sought-after designs including cream explosion cakes, number cakes, letter cakes, rasgulla fusion cakes, chocolate bomb cakes, fruit explosion cakes, camera cakes for influencers, gourmet overload cakes, and cricket-themed cakes. Each trending cake is made fresh with premium ingredients and delivered across Chennai including Adyar, T Nagar, Velachery, Anna Nagar, and OMR.
             </p>
           </article>

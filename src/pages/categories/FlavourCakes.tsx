@@ -51,29 +51,36 @@ const FlavourCakes = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Cakes by <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Flavour</span> in Chennai
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
+                Cakes by <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Flavour</span> in Chennai
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 Choose from our delicious range of classic and exotic cake flavours
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-12 relative">
           <article className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">Premium Flavoured Cakes Fresh from Chennai's Home Baker</h2>
-            <p className="text-muted-foreground mb-4">
-              Explore IBakers' extensive range of flavoured cakes in Chennai. From classic Butterscotch Bliss with caramel drizzle to traditional Black Forest with cherries, each cake is crafted with premium ingredients and fresh, natural flavours - no artificial additives or preservatives.
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Premium Flavoured Cakes Fresh from Chennai's Home Baker</h2>
+            <p className="text-slate-300 mb-4">
+              Explore IBakers' extensive range of flavoured cakes in Chennai. From classic Butterscotch Bliss with caramel drizzle to traditional Black Forest with cherries, each cake is crafted with premium ingredients and fresh, natural flavours.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-300 mb-4">
               Popular flavours include Chocolate Truffle, Red Velvet, Vanilla Dream, Pineapple Paradise, Mango Madness, Coffee Mocha, and Fruit & Nut. Available in multiple sizes and custom designs. Delivery available across Chennai including Adyar, T Nagar, Velachery, and Anna Nagar.
             </p>
           </article>

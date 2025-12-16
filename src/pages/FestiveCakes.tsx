@@ -43,7 +43,7 @@ const FestiveCakes = () => {
     {
       id: "f3",
       title: "Christmas Fruit Cake",
-      description: "Traditional fruit cake soaked in rum",
+      description: "Traditional fruit cake with premium dry fruits and nuts",
       price: "₹1,200",
       image: christmasCakeImage,
       category: "Festive Cakes",
@@ -272,29 +272,36 @@ const FestiveCakes = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Festive <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Celebration Cakes</span> in Chennai
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
+                Festive <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Celebration Cakes</span> in Chennai
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 Special cakes for every festival and celebration throughout the year
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-12 relative">
           <article className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">Celebrate Every Festival with Custom Cakes in Chennai</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Celebrate Every Festival with Custom Cakes in Chennai</h2>
+            <p className="text-slate-300 mb-4">
               IBakers creates stunning festive cakes in Chennai for all your celebrations throughout the year. From traditional Diwali cakes with diyas and rangoli patterns to vibrant Holi cakes, rich Christmas fruit cakes, glamorous New Year cakes, romantic Valentine's Day specials, elegant Mother's Day cakes, adorable Baby Shower cakes, memorable Wedding cakes, dignified Retirement cakes, and heartfelt Farewell cakes - we have designs for every occasion.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-300 mb-4">
               Each festive cake is crafted with premium ingredients and custom decorations to match the spirit of your celebration. Available in multiple sizes and flavors with advance booking recommended for festivals. Delivery available across all Chennai areas including Adyar, T Nagar, Velachery, Anna Nagar, OMR, and surrounding neighborhoods.
             </p>
           </article>
@@ -315,19 +322,19 @@ const FestiveCakes = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-hero text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Book Your Festive Cake Early</h2>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+        <section className="py-20 md:py-32 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20"></div>
+          <div className="container mx-auto px-4 text-center relative">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">Book Your Festive Cake Early</h2>
+            <p className="text-lg mb-8 text-slate-300 max-w-2xl mx-auto">
               Pre-order your custom festive cakes to ensure availability during peak seasons
             </p>
-            <Button
-              size="lg"
-              variant="secondary"
+            <button
               onClick={() => window.location.href = "/custom-orders"}
+              className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full font-semibold text-base hover:scale-105 transition-transform shadow-2xl shadow-pink-500/50"
             >
               Pre-Order Festive Cake
-            </Button>
+            </button>
           </div>
         </section>
 

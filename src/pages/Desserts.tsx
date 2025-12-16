@@ -208,13 +208,39 @@ const Desserts = () => {
       category: "Desserts",
       subCategory: "Brownies",
     },
+    {
+      id: "mini-1",
+      title: "Mini Cake",
+      description: "Adorable mini cakes perfect for personal celebrations and gifting",
+      price: "₹400",
+      image: "/minicake.png",
+      category: "Desserts",
+      subCategory: "Mini Cakes",
+      isBestseller: true,
+    },
+    {
+      id: "mug-1",
+      title: "Mug Cake",
+      description: "Delicious single-serve cake in a convenient mug, perfect for quick treats",
+      price: "₹350",
+      image: "/mugcake.png",
+      category: "Desserts",
+      subCategory: "Mug Cakes",
+      isBestseller: true,
+    },
   ];
 
-  const filterCategories = ["Pastries", "Cheesecakes", "Jar Cakes", "Cupcakes", "Brownies", "Tea Cakes"];
+  const filterCategories = ["Pastries", "Cheesecakes", "Jar Cakes", "Cupcakes", "Brownies", "Tea Cakes", "Mini Cakes", "Mug Cakes"];
 
-  const filteredProducts = activeFilter === "All"
+  const filteredProducts = (activeFilter === "All"
     ? products
-    : products.filter(p => p.subCategory === activeFilter);
+    : products.filter(p => p.subCategory === activeFilter)
+  ).sort((a, b) => {
+    // Sort bestsellers first
+    if (a.isBestseller && !b.isBestseller) return -1;
+    if (!a.isBestseller && b.isBestseller) return 1;
+    return 0;
+  });
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -240,29 +266,36 @@ const Desserts = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Delicious <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Desserts</span> in Chennai
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
+                Delicious <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Desserts</span> in Chennai
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 From pastries to cheesecakes, cupcakes to brownies - indulge in our fresh dessert collection
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-12 relative">
           <article className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">Fresh Desserts Delivered Across Chennai</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Fresh Desserts Delivered Across Chennai</h2>
+            <p className="text-slate-300 mb-4">
               IBakers offers a delightful range of desserts in Chennai perfect for every occasion. From gourmet pastries and creamy cheesecakes to convenient jar cakes and premium cupcakes, each dessert is crafted fresh with quality ingredients. Our collection includes classic fudge brownies, tea cakes perfect for your evening chai, and beautifully packaged dessert boxes ideal for corporate gifting.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-300 mb-4">
               Whether you're looking for party treats, gifting options, or just a sweet indulgence, our desserts are made to order and delivered fresh across Chennai including Adyar, T Nagar, Velachery, Anna Nagar, and OMR areas.
             </p>
           </article>
@@ -283,19 +316,19 @@ const Desserts = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-hero text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Need Desserts for Your Event?</h2>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+        <section className="py-20 md:py-32 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20"></div>
+          <div className="container mx-auto px-4 text-center relative">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">Need Desserts for Your Event?</h2>
+            <p className="text-lg mb-8 text-slate-300 max-w-2xl mx-auto">
               Bulk orders available for parties, corporate events and celebrations
             </p>
-            <Button
-              size="lg"
-              variant="secondary"
+            <button
               onClick={() => window.location.href = "/custom-orders"}
+              className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full font-semibold text-base hover:scale-105 transition-transform shadow-2xl shadow-pink-500/50"
             >
               Order Bulk Desserts
-            </Button>
+            </button>
           </div>
         </section>
 

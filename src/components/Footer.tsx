@@ -3,7 +3,7 @@ import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary border-t border-border mt-20">
+    <footer className="bg-secondary border-t border-border mt-0">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -32,13 +32,19 @@ const Footer = () => {
                 About Us
               </Link>
               <Link to="/products" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
-                Our Products
+                All Products
+              </Link>
+              <Link to="/custom-orders" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                Custom Orders
               </Link>
               <Link to="/masterclasses" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Masterclasses
               </Link>
               <Link to="/gallery" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Gallery
+              </Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                Contact Us
               </Link>
             </nav>
           </div>
@@ -47,17 +53,23 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Popular</h4>
             <nav className="flex flex-col space-y-2">
-              <Link to="/products" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+              <Link to="/categories/birthday-cakes" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Birthday Cakes
               </Link>
-              <Link to="/products" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+              <Link to="/categories/wedding-cakes" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Wedding Cakes
               </Link>
-              <Link to="/products" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+              <Link to="/categories/christmas-specials" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
                 Christmas Specials
               </Link>
-              <Link to="/products" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
-                Brownies
+              <Link to="/categories/brownies-desserts" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                Brownies & Desserts
+              </Link>
+              <Link to="/categories/anniversary-cakes" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                Anniversary Cakes
+              </Link>
+              <Link to="/categories/trending-cakes" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                Trending Cakes
               </Link>
             </nav>
           </div>
@@ -90,7 +102,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 IBakers. All rights reserved. Proudly serving Chennai.
+              © 2025 IBakers. All rights reserved. Proudly serving Chennai.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="#" className="hover:text-primary transition-smooth">

@@ -363,17 +363,24 @@ const BirthdayCakes = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Birthday <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Cakes</span> in Chennai
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
+                Birthday <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Cakes</span> in Chennai
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 Celebrate every milestone with our custom-made birthday cakes, crafted fresh with love in Chennai
               </p>
             </div>
@@ -381,13 +388,13 @@ const BirthdayCakes = () => {
         </section>
 
         {/* SEO Content Section */}
-        <section className="py-12 bg-background">
+        <section className="py-12 relative">
           <article className="container mx-auto px-4 max-w-4xl prose prose-lg">
-            <h2 className="text-3xl font-bold mb-6">Custom Birthday Cakes Delivered Fresh Across Chennai</h2>
-            <p className="text-muted-foreground mb-4">
-              Looking for the perfect birthday cake in Chennai? IBakers specializes in custom home-made birthday cakes that make every celebration memorable. From kids' birthday cakes featuring their favorite cartoon characters to elegant designs for adults, we create each cake fresh to order with premium ingredients and no preservatives.
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Custom Birthday Cakes Delivered Fresh Across Chennai</h2>
+            <p className="text-slate-300 mb-4">
+              Looking for the perfect birthday cake in Chennai? IBakers specializes in custom home-made birthday cakes that make every celebration memorable. From kids' birthday cakes featuring their favorite cartoon characters to elegant designs for adults, we create each cake fresh to order with premium ingredients.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-slate-300 mb-4">
               Our birthday cake collection includes chocolate truffle, red velvet, photo cakes, heart-shaped designs, and custom tier cakes. We deliver across Chennai including Adyar, T Nagar, Velachery, Anna Nagar, OMR, and Thoraipakkam. Same-day delivery available for orders placed before noon.
             </p>
           </article>

@@ -25,34 +25,25 @@ const SpecialtyCakes = () => {
       category: "Specialty Cakes",
       isNew: true,
     },
-    {
-      id: "21",
-      title: "Vegan Chocolate Cake",
-      description: "100% plant-based, rich chocolate flavor",
-      price: "₹1,050",
-      image: browniesImage,
-      category: "Specialty Cakes",
-      isNew: true,
-    },
   ];
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Specialty Cakes in Chennai | IBakers",
-    "description": "Eggless, sugar-free, vegan and gluten-free cakes in Chennai. Dietary-specific cakes without compromising on taste. Fresh home-made quality.",
+    "description": "Eggless, sugar-free and gluten-free cakes in Chennai. Dietary-specific cakes without compromising on taste. Fresh home-made quality.",
     "url": "https://www.ibakers.com/categories/specialty-cakes"
   };
 
   return (
     <>
       <Helmet>
-        <title>Specialty Cakes Chennai | Eggless, Sugar-Free & Vegan Cakes | IBakers</title>
-        <meta name="description" content="Order specialty cakes in Chennai - Eggless, sugar-free, vegan, gluten-free options. Dietary-specific cakes without compromising taste. Perfect for health-conscious celebrations." />
-        <meta name="keywords" content="eggless cakes Chennai, sugar-free cakes Chennai, vegan cakes Chennai, gluten-free cakes Chennai, diabetic cakes, specialty cakes, dietary cakes Chennai" />
+        <title>Specialty Cakes Chennai | Eggless & Sugar-Free Cakes | IBakers</title>
+        <meta name="description" content="Order specialty cakes in Chennai - Eggless, sugar-free, and gluten-free options. Dietary-specific cakes without compromising taste. Perfect for health-conscious celebrations." />
+        <meta name="keywords" content="eggless cakes Chennai, sugar-free cakes Chennai, gluten-free cakes Chennai, diabetic cakes, specialty cakes, dietary cakes Chennai" />
         <link rel="canonical" href="https://www.ibakers.com/categories/specialty-cakes" />
         
-        <meta property="og:title" content="Specialty Cakes Chennai | Eggless, Sugar-Free & Vegan" />
+        <meta property="og:title" content="Specialty Cakes Chennai | Eggless & Sugar-Free Cakes" />
         <meta property="og:image" content={heroImage} />
         
         <script type="application/ld+json">
@@ -60,30 +51,37 @@ const SpecialtyCakes = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
         <Header />
         
-        <section className="py-20 bg-gradient-subtle">
+        <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold">
-                Specialty <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Cakes</span> in Chennai
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
+                Specialty <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Cakes</span> in Chennai
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 Delicious cakes crafted for your specific dietary needs without compromising on taste
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-background">
+        <section className="py-12 relative">
           <article className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">Dietary-Specific Cakes for Health-Conscious Chennai</h2>
-            <p className="text-muted-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Dietary-Specific Cakes for Health-Conscious Chennai</h2>
+            <p className="text-slate-300 mb-4">
               IBakers specializes in creating specialty cakes in Chennai that cater to specific dietary requirements without sacrificing flavor. Our eggless cakes are just as moist and delicious as traditional cakes, perfect for vegetarians and those with egg allergies.
             </p>
-            <p className="text-muted-foreground mb-4">
-              We offer sugar-free cakes using natural sweeteners for diabetics, 100% plant-based vegan cakes rich in flavor, and gluten-free options for those with celiac disease or gluten sensitivity. Each specialty cake is crafted with care using premium alternative ingredients. Available across Chennai with customizable designs and flavors.
+            <p className="text-slate-300 mb-4">
+              We offer sugar-free cakes using natural sweeteners for diabetics, and gluten-free options for those with celiac disease or gluten sensitivity. Each specialty cake is crafted with care using premium alternative ingredients. Available across Chennai with customizable designs and flavors.
             </p>
           </article>
         </section>

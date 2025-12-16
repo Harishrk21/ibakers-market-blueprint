@@ -177,4 +177,22 @@ All colors MUST be HSL.
   .hover-glow {
     @apply transition-smooth hover:shadow-glow;
   }
+  
+  /* Marquee animation */
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee-right {
+    animation: marquee-right 20s linear infinite;
+  }
+  
+  .animate-marquee-right:hover {
+    animation-play-state: paused;
+  }
 }
