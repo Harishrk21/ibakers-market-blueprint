@@ -285,24 +285,24 @@ const Index = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 md:py-32 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-32 relative">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black px-2">
               Bestselling
               <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent"> Cakes & Desserts</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-400">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 px-2">
               Our customers' favorites, delivered fresh to your doorstep
             </p>
           </div>
           
           {/* Marquee Container */}
-          <div className="overflow-hidden relative">
-            <div className="flex animate-marquee-right gap-6">
+          <div className="overflow-hidden relative -mx-3 sm:-mx-4">
+            <div className="flex animate-marquee-right gap-4 sm:gap-6">
               {/* First set of products */}
-              <div className="flex gap-6 flex-shrink-0">
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+              <div className="flex gap-4 sm:gap-6 flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="bento-1"
                     title="Bento Cake"
@@ -313,7 +313,7 @@ const Index = () => {
                     isBestseller
                   />
                 </div>
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="mini-1"
                     title="Mini Cake"
@@ -324,7 +324,7 @@ const Index = () => {
                     isBestseller
                   />
                 </div>
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="mug-1"
                     title="Mug Cake"
@@ -335,7 +335,7 @@ const Index = () => {
                     isBestseller
                   />
                 </div>
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="brownies-1"
                     title="Brownies"
@@ -348,8 +348,8 @@ const Index = () => {
                 </div>
               </div>
               {/* Duplicate set for seamless loop */}
-              <div className="flex gap-6 flex-shrink-0">
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+              <div className="flex gap-4 sm:gap-6 flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="bento-1-duplicate"
                     title="Bento Cake"
@@ -360,7 +360,7 @@ const Index = () => {
                     isBestseller
                   />
                 </div>
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="mini-1-duplicate"
                     title="Mini Cake"
@@ -371,7 +371,7 @@ const Index = () => {
                     isBestseller
                   />
                 </div>
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="mug-1-duplicate"
                     title="Mug Cake"
@@ -382,7 +382,7 @@ const Index = () => {
                     isBestseller
                   />
                 </div>
-                <div className="w-[300px] md:w-[350px] flex-shrink-0">
+                <div className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[350px] flex-shrink-0">
                   <ProductCard
                     id="brownies-1-duplicate"
                     title="Brownies"

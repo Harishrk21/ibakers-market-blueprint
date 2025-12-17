@@ -38,55 +38,55 @@ const ProductCard = ({
   };
 
   return (
-    <Card className="group overflow-hidden hover:shadow-elegant transition-smooth border-border">
+    <Card className="group overflow-hidden hover:shadow-elegant transition-smooth border-border h-full flex flex-col">
       <div className="relative overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-smooth"
+          className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-smooth"
         />
-        <div className="absolute top-3 left-3 flex gap-2">
+        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex gap-1.5 sm:gap-2">
           {isNew && (
-            <Badge className="bg-primary text-primary-foreground">New</Badge>
+            <Badge className="bg-primary text-primary-foreground text-xs px-1.5 py-0.5 sm:px-2 sm:py-1">New</Badge>
           )}
           {isBestseller && (
-            <Badge className="bg-accent text-accent-foreground">Bestseller</Badge>
+            <Badge className="bg-accent text-accent-foreground text-xs px-1.5 py-0.5 sm:px-2 sm:py-1">Bestseller</Badge>
           )}
         </div>
         <button
           onClick={() => setIsLiked(!isLiked)}
-          className="absolute top-3 right-3 p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-smooth"
+          className="absolute top-2 right-2 sm:top-3 sm:right-3 p-1.5 sm:p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-smooth"
         >
           <Heart
-            className={`h-5 w-5 ${
+            className={`h-4 w-4 sm:h-5 sm:w-5 ${
               isLiked ? "fill-primary text-primary" : "text-muted-foreground"
             }`}
           />
         </button>
       </div>
       
-      <CardContent className="p-5">
-        <div className="mb-2">
+      <CardContent className="p-3 sm:p-4 md:p-5 flex-1 flex flex-col">
+        <div className="mb-1.5 sm:mb-2">
           <span className="text-xs font-medium text-primary uppercase tracking-wide">
             {category}
           </span>
         </div>
-        <h3 className="font-semibold text-lg mb-2 text-foreground">{title}</h3>
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+        <h3 className="font-semibold text-base sm:text-lg mb-1.5 sm:mb-2 text-foreground">{title}</h3>
+        <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-2 sm:mb-3 flex-1">
           {description}
         </p>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-foreground">{price}</span>
-          <span className="text-sm text-muted-foreground">onwards</span>
+          <span className="text-xl sm:text-2xl font-bold text-foreground">{price}</span>
+          <span className="text-xs sm:text-sm text-muted-foreground">onwards</span>
         </div>
       </CardContent>
       
-      <CardFooter className="p-5 pt-0 flex gap-2">
+      <CardFooter className="p-3 sm:p-4 md:p-5 pt-0 flex gap-2">
         <Button
-          className="flex-1 bg-primary hover:bg-primary-glow"
+          className="flex-1 bg-primary hover:bg-primary-glow text-xs sm:text-sm py-2 sm:py-2.5"
           onClick={handleOrderClick}
         >
-          <ShoppingCart className="mr-2 h-4 w-4" />
+          <ShoppingCart className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
           Order Now
         </Button>
       </CardFooter>
