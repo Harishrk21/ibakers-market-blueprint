@@ -21,7 +21,7 @@ const Contact = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    // Allow form to submit naturally to formsubmit.io
+    // Allow form to submit naturally to formsubmit.co
     toast.success("Sending your message...");
   };
 
@@ -138,10 +138,10 @@ const Contact = () => {
                         <h3 className="font-semibold mb-2 text-white">Email</h3>
                         <p className="text-slate-400 mb-2">Send us a detailed message</p>
                         <a
-                          href="mailto:orders@ibakers.com"
+                          href="mailto:ayisha@ibakers.in"
                           className="text-pink-400 hover:text-pink-300 hover:underline font-medium"
                         >
-                          orders@ibakers.com
+                          ayisha@ibakers.in
                         </a>
                       </div>
                     </div>
@@ -216,7 +216,7 @@ const Contact = () => {
                   <h2 className="text-2xl md:text-3xl font-black mb-6 text-white">Send Us a Message</h2>
                   
                   <form 
-                    action="https://formsubmit.co/harishradhakrishnan2001@gmail.com"
+                    action="https://formsubmit.co/ayisha@ibakers.in"
                     method="POST"
                     onSubmit={handleSubmit}
                     className="space-y-6"

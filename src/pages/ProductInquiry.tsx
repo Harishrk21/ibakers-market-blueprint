@@ -112,7 +112,7 @@ const ProductInquiry = () => {
 
                   {/* Order Form */}
                   <form
-                    action="https://formsubmit.co/harishradhakrishnan2001@gmail.com"
+                    action="https://formsubmit.co/ayisha@ibakers.in"
                     method="POST"
                     className="space-y-6 bg-slate-900/50 backdrop-blur-xl p-8 rounded-2xl border border-white/10"
                   >

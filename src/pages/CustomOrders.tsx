@@ -83,7 +83,7 @@ const CustomOrders = () => {
       toast.error("Please fill in all required fields");
       return;
     }
-    // Allow form to submit naturally to formsubmit.io
+    // Allow form to submit naturally to formsubmit.co
     toast.success("Submitting your order...");
   };
 
@@ -172,7 +172,7 @@ const CustomOrders = () => {
               </CardHeader>
               <CardContent>
                 <form 
-                  action="https://formsubmit.co/harishradhakrishnan2001@gmail.com"
+                  action="https://formsubmit.co/ayisha@ibakers.in"
                   method="POST"
                   encType="multipart/form-data"
                   onSubmit={handleSubmit}
@@ -763,8 +763,8 @@ const CustomOrders = () => {
                       <Mail className="h-6 w-6 text-pink-400 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-white mb-1">Email Us</h4>
-                        <a href="mailto:harishradhakrishnan2001@gmail.com" className="text-pink-400 hover:text-pink-300 hover:underline text-sm">
-                          harishradhakrishnan2001@gmail.com
+                        <a href="mailto:ayisha@ibakers.in" className="text-pink-400 hover:text-pink-300 hover:underline text-sm">
+                          ayisha@ibakers.in
                         </a>
                         <p className="text-xs text-slate-400 mt-1">We respond within 24 hours</p>
                       </div>
