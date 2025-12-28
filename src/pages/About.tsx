@@ -74,21 +74,45 @@ const About = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About IBakers Chennai",
-        "description": "Learn about IBakers, Chennai's trusted home baker since 2020. Premium custom cakes with fresh ingredients.",
-    "url": "https://www.ibakers.com/about"
+    "name": "About IBakers Chennai - Best Homemade Cakes",
+    "description": "Learn about IBakers - Chennai's #1 best homemade cakes bakery since 2022. Premium custom cakes with fresh ingredients. Founded by Ms. Ayisha Millath.",
+    "url": "https://www.ibakers.com/about",
+    "mainEntity": {
+      "@type": ["Bakery", "LocalBusiness"],
+      "name": "IBakers",
+      "alternateName": "IBakers Chennai - Best Homemade Cakes",
+      "description": "Chennai's #1 best homemade cakes bakery. Premium home-based bakery specializing in custom cakes, birthday cakes, wedding cakes.",
+      "foundingDate": "2022",
+      "founder": {
+        "@type": "Person",
+        "name": "Ms. N. Ayisha Millath",
+        "jobTitle": "Founder & Head Baker"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      },
+      "telephone": "+918825471551",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "500"
+      }
+    }
   };
 
   return (
     <>
       <Helmet>
-        <title>About IBakers | Chennai's Trusted Home Baker Since 2020</title>
-        <meta name="description" content="Learn about IBakers, Chennai's premium home-based bakery. Crafting custom cakes with fresh ingredients. Serving Chennai since 2020 with 500+ happy customers." />
-        <meta name="keywords" content="about IBakers, Chennai home baker, custom cake maker Chennai, bakery story Chennai, home-made cakes Chennai" />
+        <title>About IBakers | Chennai's #1 Best Homemade Cakes Baker Since 2022</title>
+        <meta name="description" content="Learn about IBakers - Chennai's #1 best homemade cakes bakery. Founded in 2022 by Ms. Ayisha Millath. Premium home-based bakery crafting custom cakes with fresh ingredients. 500+ happy customers. Best homemade cakes in Chennai." />
+        <meta name="keywords" content="about IBakers, best homemade cakes in Chennai, Chennai home baker, #1 cake maker Chennai, custom cake maker Chennai, bakery story Chennai, home-made cakes Chennai, best home baker Chennai" />
         <link rel="canonical" href="https://www.ibakers.com/about" />
         
-        <meta property="og:title" content="About IBakers | Chennai's Trusted Home Baker" />
-        <meta property="og:description" content="Chennai's premium home baker since 2020, crafting custom cakes with love" />
+        <meta property="og:title" content="About IBakers | Chennai's #1 Best Homemade Cakes Baker" />
+        <meta property="og:description" content="Chennai's #1 best homemade cakes bakery since 2022. Premium home baker crafting custom cakes with love. 500+ happy customers." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={heroImage} />
         
@@ -114,7 +138,7 @@ const About = () => {
               About <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">IBakers</span>
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Chennai's trusted home baker, crafting custom cakes with love since 2020
+              Chennai's trusted home baker, crafting custom cakes with love since 2022
             </p>
           </div>
         </div>
@@ -150,7 +174,7 @@ const About = () => {
                 
                 <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
                   <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
-                    <span className="font-semibold text-white">🎯 Vision:</span> Ms. Ayisha Millath started IBakers in 2020 with a dream to bring artisanal, home-made cakes to every celebration in Chennai. What began as a small home-based venture has flourished into one of the city's most trusted custom cake services.
+                    <span className="font-semibold text-white">🎯 Vision:</span> Ms. Ayisha Millath started IBakers in 2022 with a dream to bring artisanal, home-made cakes to every celebration in Chennai. What began as a small home-based venture has flourished into one of the city's most trusted custom cake services.
                   </p>
                   <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
                     <span className="font-semibold text-white">💪 Journey:</span> As a solo woman entrepreneur, she has built IBakers from the ground up, mastering every aspect of the business - from recipe development and cake design to customer service and business management. Her dedication to quality and innovation has earned her a loyal customer base of 500+ happy families across Chennai.

@@ -47,7 +47,7 @@ const WeddingCakes = () => {
   return (
     <>
       <Helmet>
-        <title>Wedding Cakes Chennai | Multi-Tier Custom Wedding Cakes | IBakers</title>
+        <title>Best Homemade Wedding Cakes in Chennai | IBakers - #1 Home Baker</title>
         <meta name="description" content="Order exquisite multi-tier wedding cakes in Chennai. Custom designs with fresh flowers, gold accents & elegant decorations. Serving Chennai weddings with premium home-made cakes." />
         <meta name="keywords" content="wedding cakes Chennai, multi-tier wedding cakes, custom wedding cakes Chennai, engagement cakes, anniversary cakes Chennai, wedding cake designers Chennai" />
         <link rel="canonical" href="https://www.ibakers.com/categories/wedding-cakes" />

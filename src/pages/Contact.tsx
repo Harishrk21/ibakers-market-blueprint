@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact IBakers | Order Custom Cakes in Chennai | Call & WhatsApp</title>
+        <title>Contact IBakers | Best Homemade Cakes in Chennai | Call & WhatsApp</title>
         <meta name="description" content="Contact IBakers Chennai for custom cake orders. Call, WhatsApp or email us. Serving Adyar, T Nagar, Velachery, Anna Nagar & all Chennai neighborhoods. Same-day delivery available." />
         <meta name="keywords" content="contact IBakers, cake order Chennai, custom cake inquiry, WhatsApp cake order Chennai, IBakers phone number, Chennai bakery contact" />
         <link rel="canonical" href="https://www.ibakers.com/contact" />

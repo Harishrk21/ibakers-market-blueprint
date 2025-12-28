@@ -1,14 +1,26 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# Robots.txt for IBakers Chennai - Best Homemade Cakes
+# Allow all search engines to crawl and index
 
 User-agent: *
 Allow: /
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow all important pages
+Allow: /
+Allow: /about
+Allow: /products
+Allow: /categories/
+Allow: /contact
+Allow: /gallery
+Allow: /masterclasses
+
+# Sitemap location
+Sitemap: https://www.ibakers.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

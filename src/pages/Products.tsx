@@ -669,8 +669,9 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <title>All Products | Custom Cakes, Brownies & Desserts | IBakers Chennai</title>
-        <meta name="description" content="Browse all cake products from IBakers Chennai. Birthday cakes, wedding cakes, trending designs, brownies, desserts & more. Fresh home-made with same-day delivery." />
+        <title>Best Homemade Cakes in Chennai | All Products | IBakers</title>
+        <meta name="description" content="Browse all best homemade cakes in Chennai from IBakers. Birthday cakes, wedding cakes, trending designs, brownies, desserts & more. Fresh home-made cakes. #1 home baker in Chennai." />
+        <meta name="keywords" content="best homemade cakes in Chennai, homemade cakes Chennai, custom cakes Chennai, birthday cakes, wedding cakes, brownies Chennai, desserts Chennai, IBakers" />
         <link rel="canonical" href="https://www.ibakers.com/products" />
       </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">

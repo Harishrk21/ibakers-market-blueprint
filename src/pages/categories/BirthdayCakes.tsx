@@ -340,22 +340,22 @@ const BirthdayCakes = () => {
   return (
     <>
       <Helmet>
-        <title>Birthday Cakes in Chennai | Custom Home-Made Cakes | IBakers</title>
-        <meta name="description" content="Order fresh, home-made birthday cakes in Chennai. Custom designs, photo cakes, kids' specials & more. Same-day delivery available across Chennai neighborhoods - Adyar, T Nagar, Velachery." />
-        <meta name="keywords" content="birthday cakes Chennai, custom birthday cakes, kids birthday cakes Chennai, photo cakes Chennai, chocolate birthday cake, red velvet cake Chennai, home-made cakes Chennai" />
+        <title>Best Homemade Birthday Cakes in Chennai | IBakers - #1 Home Baker</title>
+        <meta name="description" content="Order best homemade birthday cakes in Chennai from IBakers. Custom designs, photo cakes, kids' specials & more. Fresh home-made birthday cakes. Chennai's #1 home baker." />
+        <meta name="keywords" content="best homemade birthday cakes in Chennai, birthday cakes Chennai, custom birthday cakes, kids birthday cakes Chennai, photo cakes Chennai, chocolate birthday cake, red velvet cake Chennai, home-made cakes Chennai, best home baker Chennai" />
         <link rel="canonical" href="https://www.ibakers.com/categories/birthday-cakes" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Birthday Cakes in Chennai | Custom Home-Made Cakes | IBakers" />
-        <meta property="og:description" content="Order fresh, home-made birthday cakes in Chennai. Custom designs, photo cakes, kids' specials & more." />
+        <meta property="og:title" content="Best Homemade Birthday Cakes in Chennai | IBakers" />
+        <meta property="og:description" content="Order best homemade birthday cakes in Chennai. Custom designs, photo cakes, kids' specials & more. Chennai's #1 home baker." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ibakers.com/categories/birthday-cakes" />
         <meta property="og:image" content={heroImage} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Birthday Cakes in Chennai | IBakers" />
-        <meta name="twitter:description" content="Order fresh, home-made birthday cakes in Chennai with same-day delivery" />
+        <meta name="twitter:title" content="Best Homemade Birthday Cakes in Chennai | IBakers" />
+        <meta name="twitter:description" content="Order best homemade birthday cakes in Chennai. Chennai's #1 home baker." />
         
         {/* Structured Data */}
         <script type="application/ld+json">

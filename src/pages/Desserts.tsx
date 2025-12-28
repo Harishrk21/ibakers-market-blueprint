@@ -253,7 +253,7 @@ const Desserts = () => {
   return (
     <>
       <Helmet>
-        <title>Desserts in Chennai | Pastries, Cheesecakes, Cupcakes | IBakers</title>
+        <title>Best Homemade Desserts in Chennai | Pastries, Cheesecakes, Cupcakes | IBakers</title>
         <meta name="description" content="Order fresh desserts in Chennai - pastries, cheesecakes, jar cakes, cupcakes, brownies & tea cakes. Perfect for gifting and parties. Same-day delivery available across Chennai." />
         <meta name="keywords" content="desserts Chennai, pastries Chennai, cheesecakes Chennai, cupcakes Chennai, jar cakes Chennai, brownies Chennai, tea cakes Chennai, dessert boxes Chennai" />
         <link rel="canonical" href="https://www.ibakers.com/desserts" />

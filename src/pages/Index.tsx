@@ -66,44 +66,108 @@ const Index = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Bakery",
-    "name": "IBakers",
-    "description": "Premium home-based bakery in Chennai specializing in custom cakes, brownies, desserts and baking masterclasses",
+    "@type": ["Bakery", "LocalBusiness", "FoodEstablishment"],
+    "name": "IBakers - Best Homemade Cakes in Chennai",
+    "alternateName": "IBakers Chennai",
+    "description": "Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh daily. Top-rated home baker specializing in homemade cakes, custom cakes, brownies, desserts and baking masterclasses.",
     "url": "https://www.ibakers.com",
     "logo": "https://www.ibakers.com/logo.png",
-    "image": heroImage,
+    "image": [heroImage, "https://www.ibakers.com/hero-cake.jpg"],
     "founder": {
       "@type": "Person",
-      "name": "Ms. N. Ayisha Millath"
+      "name": "Ms. N. Ayisha Millath",
+      "jobTitle": "Founder & Head Baker"
     },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Chennai",
       "addressLocality": "Chennai",
       "addressRegion": "Tamil Nadu",
+      "postalCode": "600001",
       "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "13.0827",
+      "longitude": "80.2707"
     },
     "telephone": "+918825471551",
     "priceRange": "₹₹",
     "servesCuisine": "Bakery & Desserts",
     "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-20:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Chennai",
+      "sameAs": "https://en.wikipedia.org/wiki/Chennai"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Homemade Cakes and Desserts",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Birthday Cakes",
+          "url": "https://www.ibakers.com/categories/birthday-cakes"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Wedding Cakes",
+          "url": "https://www.ibakers.com/categories/wedding-cakes"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Custom Cakes",
+          "url": "https://www.ibakers.com/products"
+        }
+      ]
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "500"
-    }
+      "reviewCount": "500",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Happy Customer"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Best homemade cakes in Chennai! Fresh, delicious, and beautifully crafted."
+      }
+    ],
+    "sameAs": [
+      "https://www.ibakers.com"
+    ],
+    "keywords": "best homemade cakes in Chennai, homemade cakes Chennai, best home baker Chennai, custom cakes Chennai, birthday cakes Chennai"
   };
 
   return (
     <>
       <Helmet>
-        <title>IBakers Chennai | Custom Home-Made Cakes, Birthday Cakes & Desserts</title>
-        <meta name="description" content="Order fresh, home-made custom cakes in Chennai. Specializing in birthday cakes, wedding cakes, Christmas cakes, brownies & baking masterclasses. Same-day delivery across Chennai - Adyar, T Nagar, Velachery, Anna Nagar." />
-        <meta name="keywords" content="cakes Chennai, home-made cakes, custom cakes Chennai, birthday cakes Chennai, wedding cakes Chennai, baking classes Chennai, brownies Chennai, IBakers" />
+        <title>Best Homemade Cakes in Chennai | IBakers - #1 Home Baker | Custom Cakes</title>
+        <meta name="description" content="IBakers - Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh daily. Top-rated home baker with 500+ happy customers. Best homemade cakes in Chennai. Order now!" />
+        <meta name="keywords" content="best homemade cakes in Chennai, homemade cakes Chennai, best home baker Chennai, #1 cake maker Chennai, custom cakes Chennai, birthday cakes Chennai, wedding cakes Chennai, top bakery Chennai, fresh homemade cakes, best cakes in Chennai, IBakers Chennai" />
         <link rel="canonical" href="https://www.ibakers.com/" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="IBakers Chennai | Custom Home-Made Cakes & Desserts" />
-        <meta property="og:description" content="Order fresh, home-made custom cakes in Chennai. Birthday cakes, wedding cakes & more. Same-day delivery available." />
+        <meta property="og:title" content="Best Homemade Cakes in Chennai | IBakers - #1 Home Baker" />
+        <meta property="og:description" content="Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh. Top-rated home baker with 500+ happy customers." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ibakers.com/" />
         <meta property="og:image" content={heroImage} />
@@ -112,14 +176,19 @@ const Index = () => {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="IBakers Chennai | Custom Home-Made Cakes" />
-        <meta name="twitter:description" content="Fresh home-made cakes delivered across Chennai" />
+        <meta name="twitter:title" content="Best Homemade Cakes in Chennai | IBakers" />
+        <meta name="twitter:description" content="Chennai's #1 best homemade cakes bakery. Premium custom cakes made fresh daily." />
         <meta name="twitter:image" content={heroImage} />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
         <meta name="geo.region" content="IN-TN" />
         <meta name="geo.placename" content="Chennai" />
+        <meta name="geo.position" content="13.0827;80.2707" />
+        <meta name="ICBM" content="13.0827, 80.2707" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="1 days" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
