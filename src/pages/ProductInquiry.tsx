@@ -19,6 +19,44 @@ const ProductInquiry = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const form = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(form);
+      
+      formDataToSend.append("_subject", `New Order Inquiry: ${product.title}`);
+      formDataToSend.append("_captcha", "false");
+      formDataToSend.append("_template", "table");
+      formDataToSend.append("Product Name", product.title);
+      formDataToSend.append("Product Price", product.price);
+      formDataToSend.append("Category", product.category);
+
+      const response = await fetch("https://formsubmit.co/ayisha@ibakers.in", {
+        method: "POST",
+        body: formDataToSend,
+        mode: "no-cors",
+      });
+
+      toast.success("Order inquiry submitted successfully! We'll get back to you soon.");
+      form.reset();
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        quantity: "",
+        deliveryDate: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Failed to submit inquiry. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   if (!product) {
     window.location.href = "/products";
     return null;
@@ -112,16 +150,9 @@ const ProductInquiry = () => {
 
                   {/* Order Form */}
                   <form
-                    action="https://formsubmit.co/ayisha@ibakers.in"
-                    method="POST"
+                    onSubmit={handleSubmit}
                     className="space-y-6 bg-slate-900/50 backdrop-blur-xl p-8 rounded-2xl border border-white/10"
                   >
-                    <input type="hidden" name="_subject" value={`New Order Inquiry: ${product.title}`} />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="Product Name" value={product.title} />
-                    <input type="hidden" name="Product Price" value={product.price} />
-                    <input type="hidden" name="Category" value={product.category} />
 
                     <h2 className="text-2xl md:text-3xl font-black text-white">Order This Cake</h2>
 
@@ -215,9 +246,10 @@ const ProductInquiry = () => {
 
                     <button 
                       type="submit" 
-                      className="w-full px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg font-semibold text-base hover:scale-105 transition-transform shadow-2xl shadow-pink-500/50"
+                      className="w-full px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg font-semibold text-base hover:scale-105 transition-transform shadow-2xl shadow-pink-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                      disabled={isSubmitting}
                     >
-                      Send Order Inquiry
+                      {isSubmitting ? "Submitting..." : "Send Order Inquiry"}
                     </button>
 
                     <div className="flex gap-3">

@@ -19,10 +19,37 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // Allow form to submit naturally to formsubmit.co
-    toast.success("Sending your message...");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("_subject", "Contact Form Submission - IBakers");
+      formDataToSend.append("_captcha", "false");
+      formDataToSend.append("_template", "table");
+      formDataToSend.append("Name", formData.name);
+      formDataToSend.append("Email", formData.email);
+      formDataToSend.append("Phone", formData.phone);
+      formDataToSend.append("Message", formData.message);
+
+      const response = await fetch("https://formsubmit.co/ayisha@ibakers.in", {
+        method: "POST",
+        body: formDataToSend,
+        mode: "no-cors", // Required for formsubmit.co
+      });
+
+      // Since we're using no-cors, we can't check the response
+      // But if we reach here, the request was sent
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      toast.error("Failed to send message. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const structuredData = {
@@ -216,15 +243,9 @@ const Contact = () => {
                   <h2 className="text-2xl md:text-3xl font-black mb-6 text-white">Send Us a Message</h2>
                   
                   <form 
-                    action="https://formsubmit.co/ayisha@ibakers.in"
-                    method="POST"
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <input type="hidden" name="_subject" value="Contact Form Submission - IBakers" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_next" value={window.location.origin + "/contact?success=true"} />
                     <div className="space-y-2">
                       <Label htmlFor="name">Name *</Label>
                       <Input
@@ -279,8 +300,9 @@ const Contact = () => {
                       type="submit"
                       className="w-full bg-primary hover:bg-primary-glow"
                       size="lg"
+                      disabled={isSubmitting}
                     >
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                     
                     <p className="text-xs text-slate-400 text-center">

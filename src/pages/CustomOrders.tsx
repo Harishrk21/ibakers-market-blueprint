@@ -76,15 +76,84 @@ const CustomOrders = () => {
     if (tierInput) tierInput.value = formData.tierCount;
   }, [formData.tierCount]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
     // Validate required fields
     if (!formData.cakeType || !formData.flavor || !formData.size || !date) {
-      e.preventDefault();
       toast.error("Please fill in all required fields");
       return;
     }
-    // Allow form to submit naturally to formsubmit.co
-    toast.success("Submitting your order...");
+
+    setIsSubmitting(true);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("_subject", "New Custom Cake Order - IBakers");
+      formDataToSend.append("_captcha", "false");
+      formDataToSend.append("_template", "table");
+      formDataToSend.append("Name", formData.name);
+      formDataToSend.append("Email", formData.email);
+      formDataToSend.append("Phone", formData.phone);
+      formDataToSend.append("Cake Type", formData.cakeType);
+      formDataToSend.append("Occasion", formData.occasion);
+      formDataToSend.append("Serving Count", formData.servingCount);
+      formDataToSend.append("Flavor", formData.flavor);
+      formDataToSend.append("Size/Weight", formData.size);
+      formDataToSend.append("Tier Count", formData.tierCount);
+      formDataToSend.append("Dietary Requirements", formData.dietaryRequirements);
+      formDataToSend.append("Text on Cake", formData.textOnCake);
+      formDataToSend.append("Color Theme", formData.colorTheme);
+      formDataToSend.append("Design", formData.design);
+      formDataToSend.append("Delivery Area", formData.deliveryArea);
+      formDataToSend.append("Delivery Time", formData.deliveryTime);
+      formDataToSend.append("Special Requests", formData.specialRequests);
+      
+      if (date) {
+        formDataToSend.append("Delivery Date", date.toISOString().split('T')[0]);
+      }
+
+      // Add files if any
+      selectedFiles.forEach((file, index) => {
+        formDataToSend.append(`Reference Image ${index + 1}`, file);
+      });
+
+      const response = await fetch("https://formsubmit.co/ayisha@ibakers.in", {
+        method: "POST",
+        body: formDataToSend,
+        mode: "no-cors",
+      });
+
+      toast.success("Order submitted successfully! We'll get back to you within 24 hours.");
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        cakeType: "",
+        occasion: "",
+        servingCount: "",
+        flavor: "",
+        size: "",
+        tierCount: "",
+        dietaryRequirements: "",
+        textOnCake: "",
+        colorTheme: "",
+        design: "",
+        deliveryArea: "",
+        deliveryTime: "",
+        specialRequests: "",
+      });
+      setDate(undefined);
+      setSelectedFiles([]);
+    } catch (error) {
+      toast.error("Failed to submit order. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const structuredData = {
@@ -172,9 +241,6 @@ const CustomOrders = () => {
               </CardHeader>
               <CardContent>
                 <form 
-                  action="https://formsubmit.co/ayisha@ibakers.in"
-                  method="POST"
-                  encType="multipart/form-data"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
@@ -570,10 +636,11 @@ const CustomOrders = () => {
                   <div className="pt-6">
                     <Button
                       type="submit"
+                      disabled={isSubmitting}
                       size="lg"
                       className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600"
                     >
-                      Submit Order
+                      {isSubmitting ? "Submitting..." : "Submit Order"}
                     </Button>
                     <p className="text-xs text-slate-400 text-center mt-4">
                       Your order will be sent to us and we'll get back to you within 24 hours
