@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="50" cy="50" r="48"/>
+    </clipPath>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle with gradient -->
+  <circle cx="50" cy="50" r="50" fill="url(#borderGradient)"/>
+  <!-- Border -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#ec4899" stroke-width="2" stroke-opacity="0.3"/>
+  <!-- Logo image with circular clip and zoom - using both href methods for compatibility -->
+  <g clip-path="url(#circleClip)">
+    <image href="iabkerslogo.jpeg" xlink:href="iabkerslogo.jpeg" x="-10" y="-10" width="120" height="120" preserveAspectRatio="xMidYMid cover"/>
+  </g>
+</svg>
+

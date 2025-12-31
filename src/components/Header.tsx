@@ -79,7 +79,14 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-14 sm:h-16 md:h-20 items-center justify-between px-3 sm:px-4 md:px-6 relative">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2 z-10 flex-shrink-0" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/" className="flex items-center space-x-2 z-10 flex-shrink-0 group" onClick={() => setMobileMenuOpen(false)}>
+          <div className="relative h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full overflow-hidden bg-gradient-to-br from-pink-500/20 to-purple-500/20 border-2 border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40">
+            <img 
+              src="/iabkerslogo.jpeg" 
+              alt="IBakers Logo" 
+              className="h-full w-full object-cover object-center scale-125 transition-transform duration-300 group-hover:scale-135"
+            />
+          </div>
           <span className="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
             IBakers
           </span>

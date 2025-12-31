@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Circular Favicon</title>
+</head>
+<body>
+    <h1>Circular Favicon Generator</h1>
+    <p>This page helps generate a circular favicon. The SVG favicon should work, but if the image doesn't show, browsers may block external images in SVG favicons for security reasons.</p>
+    <p>For best results, create a circular PNG/ICO file manually or use an online tool.</p>
+    <canvas id="faviconCanvas" width="64" height="64" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="generateFavicon()">Generate Circular Favicon</button>
+    <a id="downloadLink" download="favicon.ico" style="display:none;">Download</a>
+    
+    <script>
+        function generateFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                // Clear canvas
+                ctx.clearRect(0, 0, 64, 64);
+                
+                // Draw gradient background
+                const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+                gradient.addColorStop(0, 'rgba(236, 72, 153, 0.2)');
+                gradient.addColorStop(1, 'rgba(168, 85, 247, 0.2)');
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(32, 32, 32, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Draw border
+                ctx.strokeStyle = 'rgba(236, 72, 153, 0.3)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(32, 32, 30, 0, Math.PI * 2);
+                ctx.stroke();
+                
+                // Clip to circle and draw image
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(32, 32, 30, 0, Math.PI * 2);
+                ctx.clip();
+                
+                // Draw image zoomed in
+                const scale = 1.25;
+                const offset = (64 * scale - 64) / 2;
+                ctx.drawImage(img, -offset, -offset, 64 * scale, 64 * scale);
+                ctx.restore();
+                
+                // Convert to favicon
+                const link = document.getElementById('downloadLink');
+                link.href = canvas.toDataURL('image/png');
+                link.style.display = 'inline';
+            };
+            
+            img.src = '/iabkerslogo.jpeg';
+        }
+    </script>
+</body>
+</html>
+

@@ -148,61 +148,78 @@ const About = () => {
       <section className="py-20 md:py-32 relative">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black">Our Story</h2>
               
               {/* Enhanced Founder Section */}
-              <div className="bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl border-l-4 border-pink-400 p-4 md:p-6 rounded-r-xl border border-white/20 shadow-2xl shadow-pink-500/20">
-                <div className="flex flex-col sm:flex-row items-start gap-4 mb-4">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl md:text-2xl">👩‍🍳</span>
+              <div className="bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl border-l-4 border-pink-400 p-6 md:p-8 rounded-r-xl border border-white/20 shadow-2xl shadow-pink-500/20">
+                <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl md:text-3xl">👩‍🍳</span>
                   </div>
                   <div className="flex-1">
-                    <p className="text-xs uppercase tracking-wider text-pink-400 font-semibold mb-1">Founder & Head Baker</p>
-                    <p className="text-xl md:text-2xl lg:text-3xl font-black text-white mb-2">Ms. N. Ayisha Millath</p>
-                    <p className="text-xs md:text-sm text-slate-300 mb-3">Founder | Pastry Chef | Baking Coach | Solo Woman Entrepreneur</p>
-                    <div className="flex flex-wrap gap-2 md:gap-3 mb-3">
-                      <span className="px-2 md:px-3 py-1 bg-pink-500/20 border border-pink-400/30 rounded-full text-xs font-medium text-pink-300">🏆 Award-Winning</span>
-                      <span className="px-2 md:px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-full text-xs font-medium text-purple-300">💼 Business Owner</span>
-                      <span className="px-2 md:px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-full text-xs font-medium text-blue-300">🎓 Self-Taught</span>
+                    <p className="text-sm uppercase tracking-wider text-pink-400 font-semibold mb-2">Founder & Head Baker</p>
+                    <p className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-3">Ms. N. Ayisha Millath</p>
+                    <p className="text-sm md:text-base text-slate-300 mb-4">Founder | Pastry Chef | Baking Coach | Solo Woman Entrepreneur</p>
+                    <div className="flex flex-wrap gap-2 md:gap-3 mb-4">
+                      <span className="px-3 md:px-4 py-1.5 bg-pink-500/20 border border-pink-400/30 rounded-full text-sm font-medium text-pink-300">🏆 Award-Winning</span>
+                      <span className="px-3 md:px-4 py-1.5 bg-purple-500/20 border border-purple-400/30 rounded-full text-sm font-medium text-purple-300">💼 Business Owner</span>
+                      <span className="px-3 md:px-4 py-1.5 bg-blue-500/20 border border-blue-400/30 rounded-full text-sm font-medium text-blue-300">🎓 Self-Taught</span>
                     </div>
-                    <p className="text-xs md:text-sm text-slate-400 mt-1">
+                    <p className="text-sm md:text-base text-slate-400">
                       <span className="font-semibold text-white">Contact:</span> <a href="tel:+918825471551" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">+91 88254 71551</a>
                     </p>
                   </div>
                 </div>
                 
-                <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
-                  <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
+                  <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                     <span className="font-semibold text-white">🎯 Vision:</span> Ms. Ayisha Millath started IBakers in 2022 with a dream to bring artisanal, home-made cakes to every celebration in Chennai. What began as a small home-based venture has flourished into one of the city's most trusted custom cake services.
                   </p>
-                  <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                     <span className="font-semibold text-white">💪 Journey:</span> As a solo woman entrepreneur, she has built IBakers from the ground up, mastering every aspect of the business - from recipe development and cake design to customer service and business management. Her dedication to quality and innovation has earned her a loyal customer base of 500+ happy families across Chennai.
                   </p>
-                  <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                     <span className="font-semibold text-white">🌟 Expertise:</span> With years of hands-on experience, Ms. Ayisha specializes in creating custom cakes for birthdays, weddings, anniversaries, and all special occasions. She personally oversees every order, ensuring that each cake is crafted with precision, creativity, and love.
                   </p>
-                  <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                     <span className="font-semibold text-white">🏡 Home-Based Excellence:</span> Operating from her certified home kitchen, she maintains the highest standards of hygiene and quality. Every cake is made fresh to order using premium ingredients, reflecting her commitment to excellence.
                   </p>
-                  <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                     <span className="font-semibold text-white">🎓 Baking Education:</span> As a passionate baking coach, Ms. Ayisha conducts Master Baking Classes to share her expertise with aspiring bakers. From beginner basics to advanced cake decorating techniques, wedding cake masterclasses, and brownie workshops, she teaches hands-on skills in small batches (4-10 participants) for personalized attention. Her classes cover everything from fundamental baking techniques to professional cake decorating, fondant work, and creating stunning multi-tier wedding cakes. Students learn in her certified kitchen, taking home not just knowledge but also the delicious treats they create during the class.
                   </p>
                 </div>
               </div>
               
-              <p className="text-slate-300 leading-relaxed">
-                What started as a passion for baking in a home kitchen has grown into Chennai's most loved custom cake service. IBakers was founded by <strong className="text-white">Ms. N. Ayisha Millath</strong> with a simple belief - every celebration deserves a cake that's as special as the moment itself.
-              </p>
-              <p className="text-slate-300 leading-relaxed">
-                We specialize in creating <Link to="/products" className="text-pink-400 hover:text-pink-300 hover:underline">custom cakes</Link>, <Link to="/categories/brownies-desserts" className="text-pink-400 hover:text-pink-300 hover:underline">brownies</Link>, and <Link to="/desserts" className="text-pink-400 hover:text-pink-300 hover:underline">desserts</Link> that not only look stunning but taste incredible. Every order is made fresh, using premium ingredients - because we believe in quality you can taste.
-              </p>
-              <p className="text-slate-300 leading-relaxed">
-                From intimate <Link to="/categories/birthday-cakes" className="text-pink-400 hover:text-pink-300 hover:underline">birthday celebrations</Link> to grand <Link to="/categories/wedding-cakes" className="text-pink-400 hover:text-pink-300 hover:underline">wedding receptions</Link>, we've had the privilege of being part of thousands of special moments across Chennai.
-              </p>
-              <p className="text-slate-300 leading-relaxed">
-                Beyond creating custom cakes, IBakers also offers <Link to="/masterclasses" className="text-pink-400 hover:text-pink-300 hover:underline">Master Baking Classes</Link> for those who want to learn the art of baking. Whether you're a beginner looking to master the basics or an experienced baker wanting to perfect advanced techniques like wedding cake decoration, our hands-on classes provide personalized instruction in small batches. Join us to learn from Chennai's premier baking coach and take your baking skills to the next level.
-              </p>
+              <div className="space-y-6 pt-6">
+                {/* Story Card 1 */}
+                <div className="bg-slate-900/50 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-8 hover:border-pink-400/30 transition-all shadow-lg">
+                  <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+                    What started as a passion for baking in a home kitchen has grown into Chennai's most loved custom cake service. IBakers was founded by <strong className="text-white font-semibold">Ms. N. Ayisha Millath</strong> with a simple belief - every celebration deserves a cake that's as special as the moment itself.
+                  </p>
+                </div>
+
+                {/* Story Card 2 */}
+                <div className="bg-gradient-to-br from-slate-900/60 via-purple-900/20 to-slate-900/60 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-8 hover:border-pink-400/30 transition-all shadow-lg">
+                  <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+                    We specialize in creating <Link to="/products" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">custom cakes</Link>, <Link to="/categories/brownies-desserts" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">brownies</Link>, and <Link to="/desserts" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">desserts</Link> that not only look stunning but taste incredible. Every order is made fresh, using premium ingredients - because we believe in quality you can taste.
+                  </p>
+                </div>
+
+                {/* Story Card 3 */}
+                <div className="bg-slate-900/50 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-8 hover:border-pink-400/30 transition-all shadow-lg">
+                  <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+                    From intimate <Link to="/categories/birthday-cakes" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">birthday celebrations</Link> to grand <Link to="/categories/wedding-cakes" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">wedding receptions</Link>, we've had the privilege of being part of thousands of special moments across Chennai.
+                  </p>
+                </div>
+
+                {/* Story Card 4 */}
+                <div className="bg-gradient-to-br from-pink-900/20 via-purple-900/20 to-pink-900/20 backdrop-blur-xl border-l-4 border-pink-400/50 border border-white/10 rounded-xl p-6 md:p-8 hover:border-pink-400/50 transition-all shadow-lg shadow-pink-500/10">
+                  <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+                    Beyond creating custom cakes, IBakers also offers <Link to="/masterclasses" className="text-pink-400 hover:text-pink-300 hover:underline font-medium">Master Baking Classes</Link> for those who want to learn the art of baking. Whether you're a beginner looking to master the basics or an experienced baker wanting to perfect advanced techniques like wedding cake decoration, our hands-on classes provide personalized instruction in small batches. Join us to learn from Chennai's premier baking coach and take your baking skills to the next level.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity"></div>

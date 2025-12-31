@@ -71,7 +71,7 @@ const Index = () => {
     "alternateName": "IBakers Chennai",
     "description": "Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh daily. Top-rated home baker specializing in homemade cakes, custom cakes, brownies, desserts and baking masterclasses.",
     "url": "https://www.ibakers.com",
-    "logo": "https://www.ibakers.com/logo.png",
+    "logo": "https://www.ibakers.com/iabkerslogo.jpeg",
     "image": [heroImage, "https://www.ibakers.com/hero-cake.jpg"],
     "founder": {
       "@type": "Person",
