@@ -27,3 +27,4 @@ The SVG favicon may not display the logo image because browsers block external i
 
 The current SVG favicon will work in some browsers but may not show the image in others due to security restrictions.
 
+

@@ -70,16 +70,16 @@ const Header = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-[10000] w-full border-b transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-[10000] w-full border-b transition-all duration-300 overflow-visible",
         isScrolled 
           ? "bg-slate-900/98 backdrop-blur-xl border-white/20 shadow-xl shadow-black/40" 
           : "bg-slate-900/95 backdrop-blur-xl border-white/15 shadow-lg shadow-black/20"
       )}
       style={{ willChange: 'transform' }}
     >
-      <div className="container mx-auto flex h-14 sm:h-16 md:h-20 items-center justify-between px-3 sm:px-4 md:px-6 relative">
+      <div className="container mx-auto flex h-14 sm:h-16 md:h-20 items-center justify-between px-3 sm:px-4 md:px-6 relative overflow-visible">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2 z-10 flex-shrink-0 group" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/" className="flex items-center space-x-2 z-10 flex-shrink-0 group overflow-visible" onClick={() => setMobileMenuOpen(false)}>
           <div className="relative h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full overflow-hidden bg-gradient-to-br from-pink-500/20 to-purple-500/20 border-2 border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40">
             <img 
               src="/iabkerslogo.jpeg" 
@@ -87,9 +87,14 @@ const Header = () => {
               className="h-full w-full object-cover object-center scale-125 transition-transform duration-300 group-hover:scale-135"
             />
           </div>
-          <span className="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-            IBakers
-          </span>
+          <div className="flex flex-col overflow-visible" style={{ paddingBottom: '2px' }}>
+            <span className="text-xl sm:text-2xl md:text-3xl font-black bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight" style={{ fontFamily: 'Castellar, serif', letterSpacing: '0.05em' }}>
+              I BAKERS
+            </span>
+            <span className="text-xs sm:text-sm md:text-base bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent" style={{ fontFamily: '"Great Vibes", "Dancing Script", "Brush Script MT", "Lucida Handwriting", cursive', lineHeight: '1.4', paddingBottom: '2px' }}>
+              Yummylicious...HomeBaked
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
