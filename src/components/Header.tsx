@@ -92,7 +92,7 @@ const Header = () => {
               I BAKERS
             </span>
             <span className="text-xs sm:text-sm md:text-base bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent" style={{ fontFamily: '"Great Vibes", "Dancing Script", "Brush Script MT", "Lucida Handwriting", cursive', lineHeight: '1.4', paddingBottom: '2px' }}>
-              Yummylicious...HomeBaked
+              Yummylicious.HomeBaked
             </span>
           </div>
         </Link>

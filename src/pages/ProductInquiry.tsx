@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,17 +10,42 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, MessageCircle } from "lucide-react";
 import { WHATSAPP_PHONE, WHATSAPP_MESSAGE } from "@/constants/whatsapp";
+import { toast } from "sonner";
 
 const ProductInquiry = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const product = location.state?.product;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    quantity: "",
+    deliveryDate: "",
+    message: "",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    // If no product data, redirect to products page
+    if (!product) {
+      navigate("/products", { replace: true });
+    }
+  }, [product, navigate]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!product) {
+      toast.error("Product information is missing. Please select a product again.");
+      navigate("/products");
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -57,9 +82,17 @@ const ProductInquiry = () => {
     }
   };
 
+  // Show loading state while checking for product
   if (!product) {
-    window.location.href = "/products";
-    return null;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white flex items-center justify-center">
+        <Header />
+        <div className="text-center">
+          <p className="text-xl text-slate-300 mb-4">Loading product information...</p>
+          <p className="text-sm text-slate-400">If this page doesn't load, please select a product from the products page.</p>
+        </div>
+      </div>
+    );
   }
 
   const structuredData = {

@@ -107,10 +107,10 @@ const Footer = () => {
               © 2025 IBakers. All rights reserved. Proudly serving Chennai.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
-              <Link to="#" className="hover:text-primary transition-smooth">
+              <Link to="/privacy-policy" className="hover:text-primary transition-smooth">
                 Privacy Policy
               </Link>
-              <Link to="#" className="hover:text-primary transition-smooth">
+              <Link to="/terms-conditions" className="hover:text-primary transition-smooth">
                 Terms & Conditions
               </Link>
             </div>

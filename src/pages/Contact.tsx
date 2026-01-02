@@ -220,7 +220,7 @@ const Contact = () => {
                     variant="outline"
                     size="icon"
                     className="rounded-full"
-                    onClick={() => window.open("#", "_blank")}
+                    onClick={() => window.open("https://www.instagram.com/i._.bakers_?igsh=ejM4bjh1ZGpmd285", "_blank")}
                   >
                     <Instagram className="h-5 w-5" />
                   </Button>
@@ -228,7 +228,7 @@ const Contact = () => {
                     variant="outline"
                     size="icon"
                     className="rounded-full"
-                    onClick={() => window.open("#", "_blank")}
+                    onClick={() => window.open("https://www.facebook.com/share/1DWxRT89kV/?mibextid=wwXIfr", "_blank")}
                   >
                     <Facebook className="h-5 w-5" />
                   </Button>
