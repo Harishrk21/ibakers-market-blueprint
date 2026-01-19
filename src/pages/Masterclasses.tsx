@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -25,7 +26,7 @@ const Masterclasses = () => {
         "addressCountry": "IN"
       }
     },
-    "url": "https://www.ibakers.com/masterclasses"
+    "url": "https://www.ibakers.in/masterclasses"
   };
   const classes = [
     {
@@ -158,10 +159,11 @@ const Masterclasses = () => {
   return (
     <>
       <Helmet>
-        <title>Baking Masterclasses Chennai | Learn from Expert Bakers | IBakers</title>
-        <meta name="description" content="Join baking masterclasses in Chennai. Learn cake decorating, wedding cakes, brownies & desserts from expert bakers. Beginner to advanced classes with hands-on learning. Small batches for personal attention." />
+        <title>Baking Masterclasses Chennai | Expert Bakers</title>
+        <meta name="description" content="Join baking masterclasses in Chennai. Learn cake decorating, wedding cakes, brownies & desserts from expert bakers. Beginner to advanced. Small batches." />
         <meta name="keywords" content="baking classes Chennai, cake decorating classes, baking masterclass Chennai, learn baking Chennai, wedding cake classes, dessert making classes Chennai, IBakers classes" />
-        <link rel="canonical" href="https://www.ibakers.com/masterclasses" />
+        <link rel="canonical" href="https://www.ibakers.in/masterclasses" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Baking Masterclasses Chennai | Learn from Expert Bakers" />
         <meta property="og:description" content="Learn baking from expert bakers in Chennai. Beginner to advanced classes with hands-on learning." />
@@ -181,6 +183,7 @@ const Masterclasses = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

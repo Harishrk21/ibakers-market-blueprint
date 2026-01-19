@@ -1,5 +1,5 @@
-Contact: mailto:contact@ibakers.com
+Contact: mailto:contact@ibakers.in
 Expires: 2026-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://www.ibakers.com/.well-known/security.txt
+Canonical: https://www.ibakers.in/.well-known/security.txt
 

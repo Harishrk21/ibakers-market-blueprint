@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -171,16 +172,17 @@ const CustomOrders = () => {
         "addressCountry": "IN"
       }
     },
-    "url": "https://www.ibakers.com/custom-orders"
+    "url": "https://www.ibakers.in/custom-orders"
   };
 
   return (
     <>
       <Helmet>
-        <title>Custom Cake Orders Chennai | Design Your Dream Cake | IBakers</title>
-        <meta name="description" content="Order custom cakes in Chennai. Design your dream cake for birthdays, weddings, anniversaries & celebrations. Fill our custom order form and get a personalized cake delivered across Chennai." />
+        <title>Custom Cake Orders Chennai | Design Dream Cake</title>
+        <meta name="description" content="Order custom cakes in Chennai. Design your dream cake for birthdays, weddings, anniversaries & celebrations. Fill our form for personalized cake delivery." />
         <meta name="keywords" content="custom cakes Chennai, personalized cakes Chennai, design your cake, custom order cakes Chennai, bespoke cakes Chennai, personalized cake order" />
-        <link rel="canonical" href="https://www.ibakers.com/custom-orders" />
+        <link rel="canonical" href="https://www.ibakers.in/custom-orders" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Custom Cake Orders Chennai | Design Your Dream Cake" />
         <meta property="og:description" content="Order custom cakes in Chennai. Design your dream cake with our custom order service." />
@@ -199,6 +201,7 @@ const CustomOrders = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

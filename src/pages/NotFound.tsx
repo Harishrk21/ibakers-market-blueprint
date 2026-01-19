@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
@@ -19,7 +20,8 @@ const NotFound = () => {
         <title>404 - Page Not Found | IBakers Chennai</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to IBakers homepage to browse our cakes, desserts and masterclasses in Chennai." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://www.ibakers.com/404" />
+        <link rel="canonical" href="https://www.ibakers.in/404" />
+        <meta name="last-modified" content="2025-01-15" />
       </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
       {/* Animated Background */}
@@ -30,6 +32,7 @@ const NotFound = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       <div className="flex min-h-[60vh] items-center justify-center relative">
         <div className="text-center space-y-6">
           <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">404</h1>

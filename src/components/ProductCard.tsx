@@ -42,7 +42,8 @@ const ProductCard = ({
       <div className="relative overflow-hidden">
         <img
           src={image}
-          alt={title}
+          alt={`${title} - ${category} from IBakers Chennai`}
+          loading="lazy"
           className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-smooth"
         />
         <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex gap-1.5 sm:gap-2">
@@ -55,6 +56,7 @@ const ProductCard = ({
         </div>
         <button
           onClick={() => setIsLiked(!isLiked)}
+          aria-label={isLiked ? `Remove ${title} from favorites` : `Add ${title} to favorites`}
           className="absolute top-2 right-2 sm:top-3 sm:right-3 p-1.5 sm:p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-smooth"
         >
           <Heart
@@ -85,6 +87,7 @@ const ProductCard = ({
         <Button
           className="flex-1 bg-primary hover:bg-primary-glow text-xs sm:text-sm py-2 sm:py-2.5"
           onClick={handleOrderClick}
+          aria-label={`Order ${title} - ${price}`}
         >
           <ShoppingCart className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
           Order Now

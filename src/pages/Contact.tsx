@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -57,16 +58,17 @@ const Contact = () => {
     "@type": "ContactPage",
     "name": "Contact IBakers Chennai",
     "description": "Contact IBakers for custom cake orders, baking classes and inquiries. Serving Chennai with fresh home-made cakes.",
-    "url": "https://www.ibakers.com/contact"
+    "url": "https://www.ibakers.in/contact"
   };
 
   return (
     <>
       <Helmet>
-        <title>Contact IBakers | Best Homemade Cakes in Chennai | Call & WhatsApp</title>
-        <meta name="description" content="Contact IBakers Chennai for custom cake orders. Call, WhatsApp or email us. Serving Adyar, T Nagar, Velachery, Anna Nagar & all Chennai neighborhoods. Same-day delivery available." />
+        <title>Contact IBakers Chennai | Call & WhatsApp</title>
+        <meta name="description" content="Contact IBakers Chennai for custom cake orders. Call, WhatsApp or email. Serving Adyar, T Nagar, Velachery, Anna Nagar & all Chennai. Same-day delivery." />
         <meta name="keywords" content="contact IBakers, cake order Chennai, custom cake inquiry, WhatsApp cake order Chennai, IBakers phone number, Chennai bakery contact" />
-        <link rel="canonical" href="https://www.ibakers.com/contact" />
+        <link rel="canonical" href="https://www.ibakers.in/contact" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Contact IBakers Chennai | Custom Cake Orders" />
         <meta property="og:description" content="Get in touch for custom cake orders across Chennai. WhatsApp, call or email." />
@@ -85,6 +87,7 @@ const Contact = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

@@ -83,7 +83,8 @@ const Header = () => {
           <div className="relative h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full overflow-hidden bg-gradient-to-br from-pink-500/20 to-purple-500/20 border-2 border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40">
             <img 
               src="/iabkerslogo.jpeg" 
-              alt="IBakers Logo" 
+              alt="IBakers Logo - Best Homemade Cakes in Chennai" 
+              loading="eager"
               className="h-full w-full object-cover object-center scale-125 transition-transform duration-300 group-hover:scale-135"
             />
           </div>

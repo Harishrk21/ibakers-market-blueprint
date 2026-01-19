@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import unicornCakeImage from "@/assets/unicorn-cake.jpg";
@@ -219,16 +220,17 @@ const ThemeCakes = () => {
     "@type": "CollectionPage",
     "name": "Theme Cakes in Chennai | IBakers",
     "description": "Custom theme cakes in Chennai - Unicorn, superhero, cartoon character, princess & more themed birthday cakes for kids and adults.",
-    "url": "https://www.ibakers.com/categories/theme-cakes"
+    "url": "https://www.ibakers.in/categories/theme-cakes"
   };
 
   return (
     <>
       <Helmet>
-        <title>Theme Cakes Chennai | Unicorn, Superhero & Character Cakes | IBakers</title>
-        <meta name="description" content="Order custom theme cakes in Chennai. Unicorn, superhero, cartoon characters, princess themes & more. Perfect for kids' birthdays with fresh home-made quality." />
+        <title>Theme Cakes Chennai | Unicorn & Character | IBakers</title>
+        <meta name="description" content="Order custom theme cakes in Chennai. Unicorn, superhero, cartoon characters, princess themes & more. Perfect for kids' birthdays. Fresh home-made quality." />
         <meta name="keywords" content="theme cakes Chennai, unicorn cakes Chennai, superhero cakes, cartoon character cakes Chennai, princess cakes, kids theme cakes Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/theme-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/theme-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Theme Cakes Chennai | Unicorn, Superhero & Character Cakes" />
         <meta property="og:image" content={unicornCakeImage} />
@@ -247,6 +249,7 @@ const ThemeCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

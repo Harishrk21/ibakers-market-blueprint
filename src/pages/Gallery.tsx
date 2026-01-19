@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import heroImage from "@/assets/hero-cake.jpg";
@@ -99,16 +100,17 @@ const Gallery = () => {
     "@type": "ImageGallery",
     "name": "Cake Gallery | IBakers Chennai",
     "description": "Browse our collection of handcrafted cakes, wedding cakes, birthday cakes, desserts and masterclass photos. See our work and get inspired for your celebration.",
-    "url": "https://www.ibakers.com/gallery"
+    "url": "https://www.ibakers.in/gallery"
   };
 
   return (
     <>
       <Helmet>
         <title>Cake Gallery | Our Work & Creations | IBakers Chennai</title>
-        <meta name="description" content="Browse our cake gallery showcasing handcrafted birthday cakes, wedding cakes, desserts, and masterclass photos. See our work and get inspired for your celebration in Chennai." />
+        <meta name="description" content="Browse our cake gallery showcasing handcrafted birthday cakes, wedding cakes, desserts & masterclass photos. Get inspired for your celebration in Chennai." />
         <meta name="keywords" content="cake gallery Chennai, IBakers gallery, birthday cake photos, wedding cake photos, dessert gallery Chennai, cake designs Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/gallery" />
+        <link rel="canonical" href="https://www.ibakers.in/gallery" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Cake Gallery | Our Work & Creations | IBakers Chennai" />
         <meta property="og:description" content="Browse our collection of handcrafted cakes and get inspired for your celebration" />
@@ -128,6 +130,7 @@ const Gallery = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

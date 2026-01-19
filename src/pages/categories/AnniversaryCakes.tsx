@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
@@ -177,16 +178,17 @@ const AnniversaryCakes = () => {
     "@type": "CollectionPage",
     "name": "Anniversary Cakes in Chennai | IBakers",
     "description": "Order custom anniversary cakes in Chennai for 1st, 25th, 50th anniversaries & more. Romantic designs with gold, silver themes. Home-made quality delivered across Chennai.",
-    "url": "https://www.ibakers.com/categories/anniversary-cakes"
+    "url": "https://www.ibakers.in/categories/anniversary-cakes"
   };
 
   return (
     <>
       <Helmet>
-        <title>Anniversary Cakes Chennai | 1st, 25th, 50th Anniversary | IBakers</title>
-        <meta name="description" content="Order custom anniversary cakes in Chennai for 1st year, Silver (25th), Golden (50th) & milestone anniversaries. Romantic heart-shaped designs, elegant multi-tier cakes with fresh delivery." />
+        <title>Anniversary Cakes Chennai | 1st, 25th, 50th</title>
+        <meta name="description" content="Order custom anniversary cakes in Chennai for 1st, 25th, 50th & milestone anniversaries. Romantic heart-shaped designs, elegant multi-tier cakes." />
         <meta name="keywords" content="anniversary cakes Chennai, 1st anniversary cake, 25th anniversary cake Chennai, 50th anniversary cake, silver jubilee cake, golden jubilee cake Chennai, wedding anniversary cakes Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/anniversary-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/anniversary-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Anniversary Cakes Chennai | 1st, 25th, 50th Anniversary" />
         <meta property="og:image" content={anniversaryCakeImage} />
@@ -205,6 +207,7 @@ const AnniversaryCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

@@ -20,7 +20,7 @@ Allow: /gallery
 Allow: /masterclasses
 
 # Sitemap location
-Sitemap: https://www.ibakers.com/sitemap.xml
+Sitemap: https://www.ibakers.in/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

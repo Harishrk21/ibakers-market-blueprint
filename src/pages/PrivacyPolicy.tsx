@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const PrivacyPolicy = () => {
   return (
@@ -8,7 +9,8 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>Privacy Policy | IBakers Chennai</title>
         <meta name="description" content="Privacy Policy for IBakers - Learn how we collect, use, and protect your personal information." />
-        <link rel="canonical" href="https://www.ibakers.com/privacy-policy" />
+        <link rel="canonical" href="https://www.ibakers.in/privacy-policy" />
+        <meta name="last-modified" content="2025-01-15" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
         {/* Animated Background */}
@@ -19,6 +21,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <Header />
+      <Breadcrumb />
         
         {/* Hero Section */}
         <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

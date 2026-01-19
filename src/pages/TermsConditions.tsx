@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const TermsConditions = () => {
   return (
@@ -8,7 +9,8 @@ const TermsConditions = () => {
       <Helmet>
         <title>Terms & Conditions | IBakers Chennai</title>
         <meta name="description" content="Terms and Conditions for ordering from IBakers - Read our terms of service, ordering policies, and delivery terms." />
-        <link rel="canonical" href="https://www.ibakers.com/terms-conditions" />
+        <link rel="canonical" href="https://www.ibakers.in/terms-conditions" />
+        <meta name="last-modified" content="2025-01-15" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
         {/* Animated Background */}
@@ -19,6 +21,7 @@ const TermsConditions = () => {
         </div>
 
         <Header />
+      <Breadcrumb />
         
         {/* Hero Section */}
         <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

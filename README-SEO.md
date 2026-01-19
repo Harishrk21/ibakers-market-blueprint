@@ -67,9 +67,9 @@ This website has been optimized for Google search rankings, specifically targeti
 
 ## Google Search Console Setup
 1. Go to https://search.google.com/search-console
-2. Add property: https://www.ibakers.com
+2. Add property: https://www.ibakers.in
 3. Verify ownership
-4. Submit sitemap: https://www.ibakers.com/sitemap.xml
+4. Submit sitemap: https://www.ibakers.in/sitemap.xml
 5. Monitor indexing status
 
 ## Local SEO Tips

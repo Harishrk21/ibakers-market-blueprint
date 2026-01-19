@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
@@ -247,16 +248,17 @@ const Desserts = () => {
     "@type": "CollectionPage",
     "name": "Desserts in Chennai | IBakers",
     "description": "Order fresh pastries, cheesecakes, jar cakes, cupcakes, brownies and tea cakes in Chennai. Perfect for gifting and celebrations. Home-made quality delivered.",
-    "url": "https://www.ibakers.com/desserts"
+    "url": "https://www.ibakers.in/desserts"
   };
 
   return (
     <>
       <Helmet>
-        <title>Best Homemade Desserts in Chennai | Pastries, Cheesecakes, Cupcakes | IBakers</title>
-        <meta name="description" content="Order fresh desserts in Chennai - pastries, cheesecakes, jar cakes, cupcakes, brownies & tea cakes. Perfect for gifting and parties. Same-day delivery available across Chennai." />
+        <title>Best Desserts in Chennai | Pastries & Cupcakes</title>
+        <meta name="description" content="Order fresh desserts in Chennai - pastries, cheesecakes, jar cakes, cupcakes, brownies & tea cakes. Perfect for gifting and parties. Same-day delivery." />
         <meta name="keywords" content="desserts Chennai, pastries Chennai, cheesecakes Chennai, cupcakes Chennai, jar cakes Chennai, brownies Chennai, tea cakes Chennai, dessert boxes Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/desserts" />
+        <link rel="canonical" href="https://www.ibakers.in/desserts" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Desserts in Chennai | Pastries, Cheesecakes, Cupcakes" />
         <meta property="og:image" content={pastriesImage} />
@@ -275,6 +277,7 @@ const Desserts = () => {
         </div>
 
         <Header />
+      <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

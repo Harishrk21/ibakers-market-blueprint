@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CategoryCard from "@/components/CategoryCard";
@@ -70,9 +71,9 @@ const Index = () => {
     "name": "IBakers - Best Homemade Cakes in Chennai",
     "alternateName": "IBakers Chennai",
     "description": "Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh daily. Top-rated home baker specializing in homemade cakes, custom cakes, brownies, desserts and baking masterclasses.",
-    "url": "https://www.ibakers.com",
-    "logo": "https://www.ibakers.com/iabkerslogo.jpeg",
-    "image": [heroImage, "https://www.ibakers.com/hero-cake.jpg"],
+    "url": "https://www.ibakers.in",
+    "logo": "https://www.ibakers.in/iabkerslogo.jpeg",
+    "image": [heroImage, "https://www.ibakers.in/hero-cake.jpg"],
     "founder": {
       "@type": "Person",
       "name": "Ms. N. Ayisha Millath",
@@ -115,17 +116,17 @@ const Index = () => {
         {
           "@type": "OfferCatalog",
           "name": "Birthday Cakes",
-          "url": "https://www.ibakers.com/categories/birthday-cakes"
+          "url": "https://www.ibakers.in/categories/birthday-cakes"
         },
         {
           "@type": "OfferCatalog",
           "name": "Wedding Cakes",
-          "url": "https://www.ibakers.com/categories/wedding-cakes"
+          "url": "https://www.ibakers.in/categories/wedding-cakes"
         },
         {
           "@type": "OfferCatalog",
           "name": "Custom Cakes",
-          "url": "https://www.ibakers.com/products"
+          "url": "https://www.ibakers.in/products"
         }
       ]
     },
@@ -152,7 +153,7 @@ const Index = () => {
       }
     ],
     "sameAs": [
-      "https://www.ibakers.com"
+      "https://www.ibakers.in"
     ],
     "keywords": "best homemade cakes in Chennai, homemade cakes Chennai, best home baker Chennai, custom cakes Chennai, birthday cakes Chennai"
   };
@@ -160,16 +161,17 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Best Homemade Cakes in Chennai | IBakers - #1 Home Baker | Custom Cakes</title>
-        <meta name="description" content="IBakers - Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh daily. Top-rated home baker with 500+ happy customers. Best homemade cakes in Chennai. Order now!" />
+        <title>Best Homemade Cakes in Chennai | IBakers #1</title>
+        <meta name="description" content="IBakers - Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday & wedding cakes made fresh daily. Top-rated home baker. Order now!" />
         <meta name="keywords" content="best homemade cakes in Chennai, homemade cakes Chennai, best home baker Chennai, #1 cake maker Chennai, custom cakes Chennai, birthday cakes Chennai, wedding cakes Chennai, top bakery Chennai, fresh homemade cakes, best cakes in Chennai, IBakers Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/" />
+        <link rel="canonical" href="https://www.ibakers.in/" />
+        <meta name="last-modified" content="2025-01-15" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Best Homemade Cakes in Chennai | IBakers - #1 Home Baker" />
         <meta property="og:description" content="Chennai's #1 best homemade cakes bakery. Premium custom cakes, birthday cakes, wedding cakes made fresh. Top-rated home baker with 500+ happy customers." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ibakers.com/" />
+        <meta property="og:url" content="https://www.ibakers.in/" />
         <meta property="og:image" content={heroImage} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="IBakers Chennai" />
@@ -195,15 +197,16 @@ const Index = () => {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
+        {/* Animated Background */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
 
-      <Header />
+        <Header />
+        <Breadcrumb />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12">

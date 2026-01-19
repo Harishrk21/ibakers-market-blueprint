@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import weddingCakeImage from "@/assets/wedding-cake.jpg";
@@ -31,7 +32,7 @@ const WeddingCakes = () => {
     "@type": "CollectionPage",
     "name": "Wedding Cakes in Chennai | IBakers",
     "description": "Exquisite multi-tier wedding cakes in Chennai. Custom designs with fresh flowers, gold accents & elegant decorations. Perfect for your special day.",
-    "url": "https://www.ibakers.com/categories/wedding-cakes",
+    "url": "https://www.ibakers.in/categories/wedding-cakes",
     "provider": {
       "@type": "LocalBusiness",
       "name": "IBakers",
@@ -47,10 +48,11 @@ const WeddingCakes = () => {
   return (
     <>
       <Helmet>
-        <title>Best Homemade Wedding Cakes in Chennai | IBakers - #1 Home Baker</title>
-        <meta name="description" content="Order exquisite multi-tier wedding cakes in Chennai. Custom designs with fresh flowers, gold accents & elegant decorations. Serving Chennai weddings with premium home-made cakes." />
+        <title>Best Wedding Cakes in Chennai | IBakers #1</title>
+        <meta name="description" content="Order exquisite multi-tier wedding cakes in Chennai. Custom designs with fresh flowers, gold accents & elegant decorations. Premium home-made cakes." />
         <meta name="keywords" content="wedding cakes Chennai, multi-tier wedding cakes, custom wedding cakes Chennai, engagement cakes, anniversary cakes Chennai, wedding cake designers Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/wedding-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/wedding-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Wedding Cakes Chennai | Multi-Tier Custom Wedding Cakes | IBakers" />
         <meta property="og:description" content="Exquisite multi-tier wedding cakes in Chennai with custom designs" />
@@ -71,6 +73,7 @@ const WeddingCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

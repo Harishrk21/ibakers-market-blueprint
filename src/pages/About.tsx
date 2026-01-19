@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Heart, Award, Users, MapPin, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroImage from "@/assets/hero-cake.jpg";
@@ -76,7 +77,7 @@ const About = () => {
     "@type": "AboutPage",
     "name": "About IBakers Chennai - Best Homemade Cakes",
     "description": "Learn about IBakers - Chennai's #1 best homemade cakes bakery since 2022. Premium custom cakes with fresh ingredients. Founded by Ms. Ayisha Millath.",
-    "url": "https://www.ibakers.com/about",
+    "url": "https://www.ibakers.in/about",
     "mainEntity": {
       "@type": ["Bakery", "LocalBusiness"],
       "name": "IBakers",
@@ -106,10 +107,11 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About IBakers | Chennai's #1 Best Homemade Cakes Baker Since 2022</title>
-        <meta name="description" content="Learn about IBakers - Chennai's #1 best homemade cakes bakery. Founded in 2022 by Ms. Ayisha Millath. Premium home-based bakery crafting custom cakes with fresh ingredients. 500+ happy customers. Best homemade cakes in Chennai." />
+        <title>About IBakers | #1 Homemade Cakes Baker Chennai</title>
+        <meta name="description" content="Learn about IBakers - Chennai's #1 best homemade cakes bakery. Founded in 2022 by Ms. Ayisha Millath. Premium home-based bakery crafting custom cakes. 500+ happy customers." />
         <meta name="keywords" content="about IBakers, best homemade cakes in Chennai, Chennai home baker, #1 cake maker Chennai, custom cake maker Chennai, bakery story Chennai, home-made cakes Chennai, best home baker Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/about" />
+        <link rel="canonical" href="https://www.ibakers.in/about" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="About IBakers | Chennai's #1 Best Homemade Cakes Baker" />
         <meta property="og:description" content="Chennai's #1 best homemade cakes bakery since 2022. Premium home baker crafting custom cakes with love. 500+ happy customers." />
@@ -129,6 +131,7 @@ const About = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">

@@ -32,22 +32,22 @@ vercel
 
 ### Step 3: Add Custom Domain
 1. In Vercel Dashboard → Your Project → Settings → Domains
-2. Add your custom domain (e.g., `www.ibakers.com`)
+2. Add your custom domain (e.g., `www.ibakers.in`)
 3. Follow DNS configuration instructions
 4. Wait for SSL certificate (automatic)
 
 ### Step 4: Verify Deployment
-- ✅ Check site loads: https://www.ibakers.com
-- ✅ Verify sitemap: https://www.ibakers.com/sitemap.xml
-- ✅ Verify robots.txt: https://www.ibakers.com/robots.txt
+- ✅ Check site loads: https://www.ibakers.in
+- ✅ Verify sitemap: https://www.ibakers.in/sitemap.xml
+- ✅ Verify robots.txt: https://www.ibakers.in/robots.txt
 - ✅ Test structured data: https://search.google.com/test/rich-results
 
 ## Post-Deployment SEO Checklist
 
 ### 1. Google Search Console
-- [ ] Add property: https://www.ibakers.com
+- [ ] Add property: https://www.ibakers.in
 - [ ] Verify ownership (DNS or HTML file)
-- [ ] Submit sitemap: https://www.ibakers.com/sitemap.xml
+- [ ] Submit sitemap: https://www.ibakers.in/sitemap.xml
 - [ ] Request indexing for main pages
 
 ### 2. Google Business Profile

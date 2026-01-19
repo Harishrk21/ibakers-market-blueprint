@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
@@ -313,7 +314,7 @@ const BirthdayCakes = () => {
     "@type": "CollectionPage",
     "name": "Birthday Cakes in Chennai | IBakers",
     "description": "Order fresh, home-made birthday cakes in Chennai. Custom designs, photo cakes, kids' specials & more. Same-day delivery available across Chennai.",
-    "url": "https://www.ibakers.com/categories/birthday-cakes",
+    "url": "https://www.ibakers.in/categories/birthday-cakes",
     "provider": {
       "@type": "LocalBusiness",
       "name": "IBakers",
@@ -340,16 +341,17 @@ const BirthdayCakes = () => {
   return (
     <>
       <Helmet>
-        <title>Best Homemade Birthday Cakes in Chennai | IBakers - #1 Home Baker</title>
-        <meta name="description" content="Order best homemade birthday cakes in Chennai from IBakers. Custom designs, photo cakes, kids' specials & more. Fresh home-made birthday cakes. Chennai's #1 home baker." />
+        <title>Best Birthday Cakes in Chennai | IBakers #1</title>
+        <meta name="description" content="Order best homemade birthday cakes in Chennai from IBakers. Custom designs, photo cakes, kids' specials & more. Fresh home-made cakes. Chennai's #1 home baker." />
         <meta name="keywords" content="best homemade birthday cakes in Chennai, birthday cakes Chennai, custom birthday cakes, kids birthday cakes Chennai, photo cakes Chennai, chocolate birthday cake, red velvet cake Chennai, home-made cakes Chennai, best home baker Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/birthday-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/birthday-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Best Homemade Birthday Cakes in Chennai | IBakers" />
         <meta property="og:description" content="Order best homemade birthday cakes in Chennai. Custom designs, photo cakes, kids' specials & more. Chennai's #1 home baker." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ibakers.com/categories/birthday-cakes" />
+        <meta property="og:url" content="https://www.ibakers.in/categories/birthday-cakes" />
         <meta property="og:image" content={heroImage} />
         
         {/* Twitter */}
@@ -372,6 +374,7 @@ const BirthdayCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         {/* Hero Section */}
         <section className="py-20 md:py-32 relative">

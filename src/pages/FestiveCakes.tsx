@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
@@ -253,16 +254,17 @@ const FestiveCakes = () => {
     "@type": "CollectionPage",
     "name": "Festive Cakes in Chennai | IBakers",
     "description": "Order festive celebration cakes in Chennai for Diwali, Holi, Christmas, New Year, Valentine's, Mother's Day, Baby Showers, Weddings & more. Custom designs available.",
-    "url": "https://www.ibakers.com/festive-cakes"
+    "url": "https://www.ibakers.in/festive-cakes"
   };
 
   return (
     <>
       <Helmet>
-        <title>Festive Cakes Chennai | Diwali, Christmas, Wedding & More | IBakers</title>
-        <meta name="description" content="Order festive cakes in Chennai for every celebration - Diwali, Holi, Christmas, New Year, Valentine's, Mother's Day, Baby Showers, Weddings, Retirement & Farewell parties. Custom designs with fresh home-made quality." />
+        <title>Festive Cakes Chennai | Diwali, Christmas & More</title>
+        <meta name="description" content="Order festive cakes in Chennai for Diwali, Holi, Christmas, New Year, Valentine's, Mother's Day, Baby Showers, Weddings & more. Custom designs. Fresh home-made." />
         <meta name="keywords" content="festive cakes Chennai, Diwali cakes Chennai, Christmas cakes Chennai, New Year cakes, Valentine cakes Chennai, Mother's Day cakes, Baby Shower cakes Chennai, Wedding cakes Chennai, Retirement cakes, Farewell cakes" />
-        <link rel="canonical" href="https://www.ibakers.com/festive-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/festive-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Festive Cakes Chennai | Diwali, Christmas, Wedding & More" />
         <meta property="og:image" content={diwaliCakeImage} />
@@ -281,6 +283,7 @@ const FestiveCakes = () => {
         </div>
 
         <Header />
+      <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

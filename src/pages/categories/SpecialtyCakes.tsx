@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cake.jpg";
@@ -32,16 +33,17 @@ const SpecialtyCakes = () => {
     "@type": "CollectionPage",
     "name": "Specialty Cakes in Chennai | IBakers",
     "description": "Eggless, sugar-free and gluten-free cakes in Chennai. Dietary-specific cakes without compromising on taste. Fresh home-made quality.",
-    "url": "https://www.ibakers.com/categories/specialty-cakes"
+    "url": "https://www.ibakers.in/categories/specialty-cakes"
   };
 
   return (
     <>
       <Helmet>
-        <title>Specialty Cakes Chennai | Eggless & Sugar-Free Cakes | IBakers</title>
-        <meta name="description" content="Order specialty cakes in Chennai - Eggless, sugar-free, and gluten-free options. Dietary-specific cakes without compromising taste. Perfect for health-conscious celebrations." />
+        <title>Specialty Cakes Chennai | Eggless & Sugar-Free</title>
+        <meta name="description" content="Order specialty cakes in Chennai - Eggless, sugar-free, and gluten-free options. Dietary-specific cakes without compromising taste. Perfect for health-conscious." />
         <meta name="keywords" content="eggless cakes Chennai, sugar-free cakes Chennai, gluten-free cakes Chennai, diabetic cakes, specialty cakes, dietary cakes Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/specialty-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/specialty-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Specialty Cakes Chennai | Eggless & Sugar-Free Cakes" />
         <meta property="og:image" content={heroImage} />
@@ -60,6 +62,7 @@ const SpecialtyCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

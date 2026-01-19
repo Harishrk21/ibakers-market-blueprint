@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import christmasCakeImage from "@/assets/christmas-cake.jpg";
@@ -31,16 +32,17 @@ const ChristmasSpecials = () => {
     "@type": "CollectionPage",
     "name": "Christmas Cakes in Chennai | IBakers",
     "description": "Order traditional Christmas fruit cakes and plum cakes in Chennai. Rich, non-alcoholic cakes with premium dry fruits and nuts. Pre-order for Christmas delivery.",
-    "url": "https://www.ibakers.com/categories/christmas-specials"
+    "url": "https://www.ibakers.in/categories/christmas-specials"
   };
 
   return (
     <>
       <Helmet>
         <title>Christmas Cakes Chennai | Fruit Cake & Plum Cake | IBakers</title>
-        <meta name="description" content="Order traditional Christmas fruit cakes and plum cakes in Chennai. Rich, non-alcoholic cakes with premium dry fruits and nuts. Home-made quality with advance orders accepted." />
+        <meta name="description" content="Order traditional Christmas fruit cakes and plum cakes in Chennai. Rich, non-alcoholic cakes with premium dry fruits and nuts. Fresh home-made." />
         <meta name="keywords" content="Christmas cakes Chennai, fruit cake Chennai, plum cake Chennai, Christmas bakery Chennai, non-alcoholic plum cake Chennai, festive cakes Chennai, X-mas cakes" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/christmas-specials" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/christmas-specials" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Christmas Cakes Chennai | Fruit Cake & Plum Cake" />
         <meta property="og:image" content={christmasCakeImage} />
@@ -59,6 +61,7 @@ const ChristmasSpecials = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

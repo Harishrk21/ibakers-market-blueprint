@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -125,7 +126,8 @@ const ProductInquiry = () => {
         <title>{product.title} - Order Now | IBakers Chennai</title>
         <meta name="description" content={`Order ${product.title} in Chennai. ${product.description}. Fresh home-made cakes delivered across Chennai.`} />
         <meta name="keywords" content={`${product.title}, ${product.category}, order cakes Chennai, IBakers`} />
-        <link rel="canonical" href={`https://www.ibakers.com/product/${product.id}`} />
+        <link rel="canonical" href={`https://www.ibakers.in/product/${product.id}`} />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content={`${product.title} | IBakers Chennai`} />
         <meta property="og:description" content={product.description} />

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import pinataCakeImage from "@/assets/pinata-cake.jpg";
@@ -169,16 +170,17 @@ const TrendingCakes = () => {
     "@type": "CollectionPage",
     "name": "Trending Cakes in Chennai | IBakers",
     "description": "Latest trending cake designs in Chennai - Pinata cakes, Drip cakes, Pull-me-up cakes & more viral cake designs delivered fresh.",
-    "url": "https://www.ibakers.com/categories/trending-cakes"
+    "url": "https://www.ibakers.in/categories/trending-cakes"
   };
 
   return (
     <>
       <Helmet>
         <title>Trending Cakes Chennai | Pinata & Drip Cakes | IBakers</title>
-        <meta name="description" content="Order the latest trending cake designs in Chennai - Pinata surprise cakes, elegant drip cakes, pull-me-up cakes & more viral designs. Fresh home-made delivery across Chennai." />
+        <meta name="description" content="Order latest trending cake designs in Chennai - Pinata surprise, drip cakes, pull-me-up & more viral designs. Fresh home-made delivery across Chennai." />
         <meta name="keywords" content="trending cakes Chennai, pinata cakes Chennai, drip cakes Chennai, viral cake designs, Instagram cakes Chennai, surprise cakes Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/trending-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/trending-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Trending Cakes Chennai | Pinata & Drip Cakes | IBakers" />
         <meta property="og:image" content={pinataCakeImage} />
@@ -197,6 +199,7 @@ const TrendingCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

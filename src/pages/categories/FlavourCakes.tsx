@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import butterscotchImage from "@/assets/butterscotch-cake.jpg";
@@ -32,16 +33,17 @@ const FlavourCakes = () => {
     "@type": "CollectionPage",
     "name": "Cakes by Flavour in Chennai | IBakers",
     "description": "Premium cakes in various flavours - Butterscotch, Black Forest, Chocolate, Vanilla, Red Velvet & more. Fresh home-made cakes delivered in Chennai.",
-    "url": "https://www.ibakers.com/categories/flavour-cakes"
+    "url": "https://www.ibakers.in/categories/flavour-cakes"
   };
 
   return (
     <>
       <Helmet>
-        <title>Cakes by Flavour Chennai | Butterscotch, Black Forest & More | IBakers</title>
-        <meta name="description" content="Order premium flavoured cakes in Chennai - Butterscotch, Black Forest, Chocolate Truffle, Vanilla, Red Velvet, Pineapple & more. Fresh home-made quality delivered across Chennai." />
+        <title>Cakes by Flavour Chennai | Butterscotch & More</title>
+        <meta name="description" content="Order premium flavoured cakes in Chennai - Butterscotch, Black Forest, Chocolate Truffle, Vanilla, Red Velvet & more. Fresh home-made quality delivered." />
         <meta name="keywords" content="butterscotch cake Chennai, black forest cake Chennai, chocolate cake Chennai, vanilla cake Chennai, red velvet Chennai, pineapple cake Chennai, flavoured cakes Chennai" />
-        <link rel="canonical" href="https://www.ibakers.com/categories/flavour-cakes" />
+        <link rel="canonical" href="https://www.ibakers.in/categories/flavour-cakes" />
+        <meta name="last-modified" content="2025-01-15" />
         
         <meta property="og:title" content="Cakes by Flavour Chennai | Butterscotch, Black Forest & More" />
         <meta property="og:image" content={butterscotchImage} />
@@ -60,6 +62,7 @@ const FlavourCakes = () => {
         </div>
 
         <Header />
+        <Breadcrumb />
         
         <section className="py-20 md:py-32 relative">
           <div className="container mx-auto px-4">

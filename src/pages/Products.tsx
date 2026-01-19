@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -669,10 +670,11 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <title>Best Homemade Cakes in Chennai | All Products | IBakers</title>
-        <meta name="description" content="Browse all best homemade cakes in Chennai from IBakers. Birthday cakes, wedding cakes, trending designs, brownies, desserts & more. Fresh home-made cakes. #1 home baker in Chennai." />
+        <title>All Cakes Products in Chennai | IBakers</title>
+        <meta name="description" content="Browse all best homemade cakes in Chennai from IBakers. Birthday, wedding, trending cakes, brownies, desserts & more. Fresh home-made. #1 home baker Chennai." />
         <meta name="keywords" content="best homemade cakes in Chennai, homemade cakes Chennai, custom cakes Chennai, birthday cakes, wedding cakes, brownies Chennai, desserts Chennai, IBakers" />
-        <link rel="canonical" href="https://www.ibakers.com/products" />
+        <link rel="canonical" href="https://www.ibakers.in/products" />
+        <meta name="last-modified" content="2025-01-15" />
       </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white overflow-hidden">
       {/* Animated Background */}
@@ -683,6 +685,7 @@ const Products = () => {
       </div>
 
       <Header />
+      <Breadcrumb />
       
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-32 relative">
